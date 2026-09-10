@@ -1,39 +1,66 @@
-# Staff Data Engineer & Product Architect  
+# vinay-dwbi.github.io
 
-#### **Technical Skills:**  
-Snowflake, Big Data, Oracle, MongoDB, Teradata, Python, SQL, PL/SQL, Shell Scripting, JavaScript, Kafka, Matillion, Informatica, Databricks, Airflow, ODI, Attunity, AWS (Lambda, S3, SQS, EC2), Azure, Kubernetes, Docker, Prometheus, Grafana, Tableau, Power BI, Looker, OBIEE, Oracle Fusion, BI Publisher  
+Personal site. Plain HTML and one stylesheet. No framework, no build step, no dependencies.
+Edit a file, commit, done.
 
-## **Work Experience**  
+## Deploying
 
-### **Staff Data Engineer @ eHealth** (_March 2020 - Present_)  
-- Defined long-term business goals and translated them into actionable technical strategies.  
-- Streamlined data engineering workflows using Matillion and Databricks to support business and data science initiatives.  
-- Led real-time data streaming implementation, improving data availability and real-time insights.  
-- Spearheaded data monetization projects, ensuring governance, compliance, and business alignment.  
-- Developed machine learning solutions and local RAG models using LLMs to drive business innovation.  
+1. On GitHub, create a repository named exactly **`vinay-dwbi.github.io`** (must match your
+   username or it will not publish at the root domain).
+2. Upload the contents of this folder to the repository root. Not the folder itself, the
+   contents. `index.html` must sit at the top level.
+3. Settings → Pages → Source: **Deploy from a branch**, branch `main`, folder `/ (root)`.
+4. Wait a minute or two. The site is live at `https://vinay-dwbi.github.io`.
 
-### **Sr. Architect, Data Warehouse @ Kaiser Permanente** (_March 2017 - February 2020_)  
-- Designed and implemented scalable data ingestion pipelines for enterprise data warehouse integration.  
-- Orchestrated pharmacy data workflows using Apache Airflow, improving scalability and reducing manual overhead.  
-- Developed a CRM and BI framework for managing programs, contacts, and financial data.  
-- Built automated reporting systems for pharmacy operations, improving efficiency and business insights.  
+`.nojekyll` is included so GitHub serves the files as-is instead of running them through Jekyll.
+Do not delete it.
 
-### **Solution Architect @ Trane** (_November 2016 - March 2017_)  
-- Led migration of legacy reporting platform to a modern enterprise BI platform.  
-- Developed system architecture, UX improvements, and proof-of-concept solutions for enhanced user adoption.  
-- Conducted effort estimation, sprint planning, and cost analysis for seamless project execution.  
+## Structure
 
-### **IT Manager, Data Warehouse & BI Projects @ Belk** (_February 2013 - May 2016_)  
-- Led an eight-member onshore and offshore team to deliver data engineering and BI projects for retail and merchandising.  
-- Designed and implemented data pipelines integrating data from Oracle RMS and external sources.  
-- Automated reporting for 400+ store managers using Oracle BI Publisher.  
-- Established an in-house Tableau service to enhance business reporting capabilities.  
+```
+index.html            About. The front page.
+work/index.html       Experience and technical depth.
+building/index.html   Homemade, RE Analyzer, and the thesis behind them.
+writing/index.html    Blog index. Currently an empty state with the queued topics.
+writing/_template/    Copy this to start a post.
+404.html              Not-found page. GitHub Pages uses this automatically.
+style.css             Everything visual. Design tokens at the top.
+```
 
-### **Senior Software Engineer @ Cognizant** (_September 2008 - October 2013_)  
-- Delivered CRM, BI, and data warehouse solutions for industries such as healthcare, retail, insurance, finance, logistics, and media.  
-- Worked with clients including TIAA-CREF, DHL, CBeyond, Franklin Templeton, and The New York Times.  
+## Adding a post
 
-## **Education & Certifications**  
-- **Product Management** | Stanford School of Engineering  
-- **Bachelor of Engineering in Electronics** | VTU, Karnataka  
-- **Oracle Certification** – OBIEE Server Architect  
+```
+cp -r writing/_template writing/your-post-slug
+```
+
+Edit `writing/your-post-slug/index.html`, then add a row to the list in `writing/index.html`:
+
+```html
+<div class="row">
+  <div class="when">Oct 2026</div>
+  <div class="body">
+    <h3><a href="/writing/your-post-slug/">Post title</a></h3>
+    <p>One sentence on what it argues.</p>
+  </div>
+</div>
+```
+
+Delete the `<div class="empty">` block once you have two or three posts up.
+
+## Changing the look
+
+Everything visual is in the `:root` block at the top of `style.css`. Changing `--blue`
+changes every link and accent on the site. `--measure` controls column width; 640px keeps
+lines under about 75 characters, which is where prose is comfortable to read.
+
+Dark mode is automatic via `prefers-color-scheme` and has its own token block. No toggle,
+because a toggle is a control nobody asked for.
+
+## Custom domain, if you ever want one
+
+Add a file named `CNAME` at the root containing just your domain, e.g. `vinayambalihalli.com`.
+Then point a CNAME record at `vinay-dwbi.github.io` in your DNS. Settings → Pages will confirm.
+
+## Before you publish
+
+See `CONTENT-NOTES.md`. Two judgment calls in there are worth thirty seconds of your time.

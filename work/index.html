@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Work — Vinay Ambalihalli</title>
+<meta name="description" content="Twenty years across healthcare, retail, and financial services. Experience and technical depth.">
+<meta property="og:title" content="Work — Vinay Ambalihalli">
+<meta property="og:description" content="Twenty years across healthcare, retail, and financial services. Experience and technical depth.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FBFBFC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1114" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="page">
+<header class="mast">
+  <div class="name">Vinay Ambalihalli</div>
+  <nav>
+    <a href="/">About</a>
+    <a href="/work/" aria-current="page">Work</a>
+    <a href="/building/">Building</a>
+    <a href="/writing/">Writing</a>
+  </nav>
+</header>
+<main>
+<h1>Work</h1>
+
+<p class="lede">Twenty years building data platforms, nine of them in healthcare.
+The short version is below. The <a href="mailto:vinay.ambal@gmail.com">full résumé</a> is a
+better fit for detail.</p>
+
+<h2>Experience</h2>
+
+<div class="row">
+  <div class="when">2020&ndash;now</div>
+  <div class="body">
+    <h3>Staff Data Engineer &amp; Product Architect</h3>
+    <div class="where">eHealth, Inc. &middot; Santa Clara, California</div>
+    <p>Architecture and governance owner for the enterprise data platform behind a national
+    health insurance marketplace covering Medicare, Medicaid supplement, individual and family,
+    small group, and ICHRA. A Snowflake and Databricks lakehouse fed by change-data capture,
+    streaming, and batch integration from a microservices estate.</p>
+    <p>I own architecture review and approval, data governance, and SOX compliance for everything
+    the data engineering team ships. I lead a subset of the data organisation day to day and have
+    run onshore and offshore delivery teams on our customer and partner data programmes.</p>
+    <p>The work I am proudest of: rebuilding customer identity resolution to unify records across
+    transactional, web, and telephony channels, and building the component library that turned
+    onboarding a new source from a bespoke engineering project into a configuration exercise.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="when">2017&ndash;2020</div>
+  <div class="body">
+    <h3>DW/BI Architect, Pharmacy Data Warehouse</h3>
+    <div class="where">Kaiser Permanente &middot; Pleasanton, California</div>
+    <p>Architected and operated the pharmacy data warehouse for an integrated health plan serving
+    more than ten million members, integrating prescription, formulary, patient, and finance data
+    downstream of the pharmacy claims systems.</p>
+    <p>Migrated brittle cron-based orchestration to Apache Airflow with parameterised DAGs, and
+    built the CRM and reporting framework that Kaiser Permanente International adopted as its
+    operational system of record. All of it under HIPAA change control, which teaches you fast
+    that traceability is a design constraint rather than paperwork.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="when">2013&ndash;2016</div>
+  <div class="body">
+    <h3>Data Warehouse &amp; BI Lead, Merchandising and Finance</h3>
+    <div class="where">Belk &middot; Charlotte, North Carolina</div>
+    <p>Led a hybrid onshore and offshore team of eight delivering data engineering and analytics
+    across merchandising, allocation, pricing, invoice match, and store sales. Owned requirements,
+    design, estimation, and delivery, and worked directly with merchandising leadership on the
+    platform roadmap.</p>
+    <p>Wrote the business case for the enterprise BI platform and data lake migration. That was the
+    first time I had to argue for a platform investment in the language of the people paying for it,
+    and it changed how I think about architecture.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="when">2008&ndash;2012</div>
+  <div class="body">
+    <h3>BI Architect and Onsite Lead</h3>
+    <div class="where">TIAA-CREF &middot; Charlotte, North Carolina</div>
+    <p>Onsite lead for the analytics platform supporting retirement plan administration: plan
+    lifecycle management, institutional reporting, and automated distribution to plan
+    administrators. Regulated reporting, where being wrong has consequences beyond a broken
+    dashboard.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="when">2005&ndash;2008</div>
+  <div class="body">
+    <h3>Software Engineer</h3>
+    <div class="where">Cognizant &middot; Bangalore, India</div>
+    <p>Where I learned the craft. CRM, data warehouse, and analytics delivery for clients in
+    financial services, logistics, telecommunications, and media across North America and
+    Asia-Pacific.</p>
+  </div>
+</div>
+
+<h2>Technical depth</h2>
+
+<div class="skills">
+<dl>
+  <dt>Data platforms</dt>
+  <dd>Snowflake, Databricks, Delta Lake, PostgreSQL, Oracle, Teradata, MySQL, DocumentDB. Warehouse and lakehouse design, dimensional and canonical modelling.</dd>
+
+  <dt>Processing</dt>
+  <dd>Apache Spark and PySpark, including the parts that matter in production: partitioning strategy, shuffle reduction, memory configuration, and reading a DAG when a job that ran fine yesterday does not.</dd>
+
+  <dt>Integration</dt>
+  <dd>Kafka, change-data capture, Apache Airflow, Matillion, Informatica, Oracle Data Integrator. Real-time, near-real-time, and batch, and knowing which one a problem actually needs.</dd>
+
+  <dt>Languages</dt>
+  <dd>Python, SQL, PL/SQL, shell, JavaScript, TypeScript.</dd>
+
+  <dt>Cloud</dt>
+  <dd>AWS (Lambda, S3, SQS, EC2), Vercel, Docker, Git and GitHub, CI/CD, serverless deployment.</dd>
+
+  <dt>Quality and governance</dt>
+  <dd>Reconciliation and count-validation frameworks, lineage, automated data dictionaries, row-level and object-level security, SOX compliance ownership, regulated SDLC and change management.</dd>
+
+  <dt>Machine learning</dt>
+  <dd>Production ML pipelines, ML-based entity resolution on distributed compute, and local retrieval-augmented generation over contextual enterprise data.</dd>
+
+  <dt>Analytics</dt>
+  <dd>Looker and LookML, Tableau, OBIEE and BI Publisher. Semantic layer design and self-service enablement.</dd>
+
+  <dt>Leadership</dt>
+  <dd>Architecture review and approval, standards definition, onshore and offshore delivery, estimation, mentoring, and the occasional cross-functional escalation that needed a recommendation rather than a complaint.</dd>
+</dl>
+</div>
+
+<h2>Education</h2>
+<p class="small muted">Product Management Certificate, Stanford University School of Engineering.<br>
+B.E. Electronics and Communications, Visvesvaraya Technological University.<br>
+Oracle Certified &mdash; Business Intelligence Server Architect and Analytics Application Developer.</p>
+</main>
+<footer class="foot">
+  <a href="mailto:vinay.ambal@gmail.com">Email</a>
+  <a href="https://linkedin.com/in/vinayambalihalli">LinkedIn</a>
+  <a href="https://github.com/vinay-dwbi">GitHub</a>
+  <span class="place">Pleasanton, California</span>
+</footer>
+</div>
+</body>
+</html>

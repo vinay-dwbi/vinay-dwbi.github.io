@@ -1,0 +1,121 @@
+/* Vinay Ambalihalli — personal site
+   One stylesheet. Edit tokens below to change everything. */
+
+:root{
+  --paper:#FBFBFC;
+  --ink:#14161A;
+  --ink2:#565C65;
+  --ink3:#878D96;
+  --rule:#E4E7EC;
+  --rule-soft:#F0F2F5;
+  --blue:#1F5FD1;
+  --blue-line:#C3D3F1;
+  --mark:#EDF2FC;
+  --sans:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --measure:640px;
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#0F1114;
+    --ink:#E7EAEE;
+    --ink2:#9BA2AC;
+    --ink3:#6E757F;
+    --rule:#242932;
+    --rule-soft:#1A1E25;
+    --blue:#8AB0F7;
+    --blue-line:#2F4576;
+    --mark:#182338;
+  }
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16.5px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.page{max-width:var(--measure);margin:0 auto;padding:64px 26px 110px}
+
+a{color:var(--blue);text-decoration:none;border-bottom:1px solid var(--blue-line);padding-bottom:1px}
+a:hover{border-bottom-color:var(--blue)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:2px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* masthead */
+.mast{margin-bottom:52px}
+.mast .name{font-size:15.5px;font-weight:600;letter-spacing:-.005em;color:var(--ink)}
+.mast nav{margin-top:8px;display:flex;gap:19px;flex-wrap:wrap;font-size:15px}
+.mast nav a{color:var(--ink2);border-bottom:none;padding-bottom:0}
+.mast nav a:hover{color:var(--blue)}
+.mast nav a[aria-current="page"]{color:var(--ink);font-weight:500}
+
+/* headings */
+h1{font-size:27px;line-height:1.28;font-weight:600;letter-spacing:-.022em;margin:0 0 22px}
+h2{font-size:15px;font-weight:600;letter-spacing:.004em;color:var(--ink2);
+   margin:56px 0 14px;padding-bottom:9px;border-bottom:1px solid var(--rule)}
+h3{font-size:17px;font-weight:500;letter-spacing:-.011em;margin:0 0 5px;line-height:1.4}
+
+p{margin:0 0 19px}
+.lede{font-size:19px;line-height:1.6;letter-spacing:-.009em}
+.muted{color:var(--ink2)}
+.small{font-size:14.5px}
+mark{background:var(--mark);color:inherit;padding:1px 5px;border-radius:3px}
+
+ul{margin:0 0 19px;padding-left:20px}
+li{margin-bottom:7px}
+
+/* dated / titled rows */
+.row{display:flex;gap:22px;padding:19px 0;border-top:1px solid var(--rule-soft);align-items:baseline}
+.row:first-of-type{border-top:1px solid var(--rule)}
+.row .when{font-family:var(--mono);font-size:12.5px;color:var(--ink3);flex:0 0 84px;padding-top:4px;
+  font-variant-numeric:tabular-nums}
+.row .body{flex:1;min-width:0}
+.row p{margin:4px 0 0;font-size:15px;color:var(--ink2);line-height:1.6}
+.row .where{font-size:13.5px;color:var(--ink3);margin-top:2px}
+
+/* skills */
+.skills dl{margin:0;display:grid;grid-template-columns:150px 1fr;gap:0}
+.skills dt{font-size:14px;color:var(--ink3);padding:13px 0;border-top:1px solid var(--rule-soft)}
+.skills dd{margin:0;padding:13px 0;border-top:1px solid var(--rule-soft);font-size:15px;color:var(--ink2);line-height:1.6}
+.skills dt:first-of-type,.skills dl>dt:first-child+dd{border-top:1px solid var(--rule)}
+
+/* project blocks */
+.project{padding:24px 0;border-top:1px solid var(--rule)}
+.project:last-of-type{border-bottom:1px solid var(--rule)}
+.project .meta{font-family:var(--mono);font-size:12.5px;color:var(--ink3);margin-bottom:8px}
+.project p{font-size:15.5px;color:var(--ink2);margin:9px 0 0}
+.project .thesis{color:var(--ink);border-left:2px solid var(--blue-line);padding-left:15px;margin-top:16px;
+  font-size:15.5px;line-height:1.62}
+
+/* empty state */
+.empty{border:1px dashed var(--rule);border-radius:4px;padding:24px;color:var(--ink2);font-size:15px}
+.empty p:last-child{margin-bottom:0}
+
+/* footer */
+.foot{margin-top:76px;padding-top:22px;border-top:1px solid var(--rule);
+  display:flex;gap:20px;flex-wrap:wrap;font-size:14.5px}
+.foot a{color:var(--ink2);border-bottom:none;padding-bottom:0}
+.foot a:hover{color:var(--blue)}
+.foot .place{margin-left:auto;color:var(--ink3)}
+
+@media (max-width:560px){
+  .page{padding:44px 22px 80px}
+  h1{font-size:24px}
+  .lede{font-size:17.5px}
+  .row{flex-direction:column;gap:2px}
+  .row .when{flex:none}
+  .skills dl{grid-template-columns:1fr}
+  .skills dt{padding-bottom:0;border-top:1px solid var(--rule-soft)}
+  .skills dd{padding-top:4px;border-top:none}
+  .foot .place{margin-left:0;width:100%}
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Building — Vinay Ambalihalli</title>
+<meta name="description" content="Homemade, RE Analyzer, and the thinking behind them.">
+<meta property="og:title" content="Building — Vinay Ambalihalli">
+<meta property="og:description" content="Homemade, RE Analyzer, and the thinking behind them.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FBFBFC" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0F1114" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="page">
+<header class="mast">
+  <div class="name">Vinay Ambalihalli</div>
+  <nav>
+    <a href="/">About</a>
+    <a href="/work/">Work</a>
+    <a href="/building/" aria-current="page">Building</a>
+    <a href="/writing/">Writing</a>
+  </nav>
+</header>
+<main>
+<h1>Building</h1>
+
+<p class="lede">Things I have made outside the day job, and the reasoning underneath them.
+These are small on purpose. They exist so that when I make an architecture call at work,
+I have recently paid the price of one myself.</p>
+
+<h2>The thesis</h2>
+
+<p>Every marketplace I care about has the same bottleneck, and it is never the software.
+It is <mark>supply-side liquidity and regulatory gating.</mark> Getting sellers onto the platform
+and keeping them compliant is the hard part. The app is the easy part, which is exactly why
+so many people build the app first.</p>
+
+<p>I learned that the expensive way. Years ago I spent about a year setting up a fast-food
+business in India: a small idli concept with a model that stretched across dine-in, delivery,
+catering, franchising, and cloud kitchens. I registered the domains. I built out the plan.
+It closed at a loss.</p>
+
+<p>What I took from it was not that food is hard. It was that I had solved the wrong problem
+carefully. Everything I build now starts from the constraint rather than the interface.</p>
+
+<h2>Projects</h2>
+
+<div class="project">
+  <div class="meta">live in production &middot; solo</div>
+  <h3><a href="https://homemade-hub.com">Homemade</a></h3>
+  <p>A hyperlocal two-sided marketplace connecting home cooks with people nearby who want to
+  eat what they make. Next.js and TypeScript on Vercel, PostgreSQL on Supabase.
+  I designed it, built it, secured it, deployed it, and I operate it.</p>
+  <p>It is running as a pilot with a handful of cooks in a single ZIP code. That is deliberate.
+  I would rather learn what actually breaks at three cooks than guess at three hundred.</p>
+  <div class="thesis">The second attempt at a market I already paid tuition in. Built around
+  the supply side and the compliance surface first, with the customer experience following
+  from those constraints instead of the other way round.</div>
+  <p class="small muted" style="margin-top:16px">The engineering decision I am most attached to:
+  authorisation lives in the database as row-level security rather than in the application layer.
+  Not because it is more elegant, but because of the failure direction. A policy I forget to write
+  denies access. An application check I forget to write leaks data. When you are the only reviewer
+  on the team, you design for the mistake you can survive.</p>
+</div>
+
+<div class="project">
+  <div class="meta">side project</div>
+  <h3>RE Analyzer</h3>
+  <p>A housing inventory analysis tool built on ZIP-level listing data, with a pipeline that
+  ingests, normalises, and serves market signal at neighbourhood granularity.
+  FastAPI and Python, with an embedded SQLite-compatible database at the edge.</p>
+  <div class="thesis">An exercise in how cheap a real data product can be if you refuse to
+  over-provision. It runs for roughly a dollar a month. Every architecture decision is written
+  down with the alternative I rejected and why.</div>
+</div>
+
+<h2>Why I keep doing this</h2>
+
+<p>I have spent twenty years building platforms that serve someone else's product. That is real
+work and I am good at it. But there is a gap between reviewing a design and living with one, and
+the only way I know to close it is to ship something end to end and then run it for a while.</p>
+
+<p>Everything on this page is small. None of it is where my ambition is. What it does is keep me
+honest about what production actually costs, so that when I tell a team their approach will not
+survive contact with real users, I am speaking from something more recent than memory.</p>
+</main>
+<footer class="foot">
+  <a href="mailto:vinay.ambal@gmail.com">Email</a>
+  <a href="https://linkedin.com/in/vinayambalihalli">LinkedIn</a>
+  <a href="https://github.com/vinay-dwbi">GitHub</a>
+  <span class="place">Pleasanton, California</span>
+</footer>
+</div>
+</body>
+</html>

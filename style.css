@@ -93,6 +93,7 @@ li{margin-bottom:7px}
 .project{padding:24px 0;border-top:1px solid var(--rule)}
 .project:last-of-type{border-bottom:1px solid var(--rule)}
 .project .meta{font-family:var(--mono);font-size:12.5px;color:var(--ink3);margin-bottom:8px}
+.project .role{font-size:13.5px;color:var(--ink3);margin-top:2px}
 .project p{font-size:15.5px;color:var(--ink2);margin:9px 0 0}
 .project ul{margin:12px 0 0;padding-left:18px}
 .project li{font-size:15.5px;color:var(--ink2);line-height:1.6;margin-bottom:8px}

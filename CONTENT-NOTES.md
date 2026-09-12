@@ -1,6 +1,6 @@
 # Content notes
 
-Decisions I made writing the copy, and the two things you should decide for yourself.
+Decisions made writing the copy, and the things you should decide for yourself.
 
 ## Deliberately left off
 
@@ -14,27 +14,26 @@ The site instead describes scope qualitatively: "a national health insurance mar
 "a health plan serving more than ten million members." Kaiser's membership is public information.
 The rest is not.
 
-**Anything you cannot talk about for two minutes.** No Terraform, no Kubernetes, no vector
-databases, no EDI. Every technology named on the Work page is one you have actually used.
-Keep it that way. A personal site invites deeper questions than a résumé does.
+**Anything you cannot talk about for two minutes.** Every technology named on the Work page
+should be one you have actually used. Keep it that way. A personal site invites deeper questions
+than a résumé does.
 
 **Your current employer's financial situation, and any reason-for-leaving framing.**
 The site says you are open to conversations. It does not say why.
 
-## Two calls to make before you publish
+## Judgment calls
 
-**1. The restaurant venture.** It is on the Building page, one paragraph, framed as tuition paid
-rather than a failure buried. My reasoning: on a résumé it reads as unfocused, but on a personal
-site narrative works differently, and it is what makes Homemade legible as a considered second
-attempt rather than a hobby. A reader who sees "closed at a loss" followed by what you learned
-comes away thinking this person is honest and reflective.
+**1. The hospitality venture.** Idli Point & Chat Corner is on the Enterprise & Ventures page
+as a real operating design problem: brand, supply chain, retail footprint. The thesis still
+names the expensive lesson without leading with "closed at a loss." If you would rather keep
+that framing more explicit, add it back in the thesis block.
 
-If you disagree, delete the two paragraphs under "The thesis" that start with "I learned that the
-expensive way" and "What I took from it." The page still works.
+**2. RE Analyzer.** Listed under SaaS & Automation without naming UBL Solutions LLC or family
+involvement, which keeps it a product rather than a second employer. If you would rather it
+not appear at all, remove that list item.
 
-**2. RE Analyzer.** Listed without naming UBL Solutions LLC or your wife's involvement, which
-keeps it a project rather than a second employer. If you would rather it not appear at all,
-delete the whole `<div class="project">` block for it.
+**3. Writing.** The Writing section was removed. If you want it back later, restore a
+`writing/` folder and add the nav link to every page.
 
 ## Tone
 

@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Building — Vinay Ambalihalli</title>
-<meta name="description" content="Homemade, RE Analyzer, and the thinking behind them.">
-<meta property="og:title" content="Building — Vinay Ambalihalli">
-<meta property="og:description" content="Homemade, RE Analyzer, and the thinking behind them.">
+<title>Enterprise &amp; Ventures — Vinay Ambalihalli</title>
+<meta name="description" content="Hospitality ventures, SaaS tooling, and AI experiments built outside the day job.">
+<meta property="og:title" content="Enterprise &amp; Ventures — Vinay Ambalihalli">
+<meta property="og:description" content="Hospitality ventures, SaaS tooling, and AI experiments built outside the day job.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#FBFBFC" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0F1114" media="(prefers-color-scheme: dark)">
@@ -22,61 +22,62 @@
   <nav>
     <a href="/">About</a>
     <a href="/work/">Work</a>
-    <a href="/building/" aria-current="page">Building</a>
-    <a href="/writing/">Writing</a>
+    <a href="/building/" aria-current="page">Enterprise &amp; Ventures</a>
   </nav>
 </header>
 <main>
-<h1>Building</h1>
+<h1>Enterprise Ventures &amp; Innovations</h1>
 
-<p class="lede">Things I have made outside the day job, and the reasoning underneath them.
-These are small on purpose. They exist so that when I make an architecture call at work,
-I have recently paid the price of one myself.</p>
+<p class="lede">Ventures and products I have built outside the day job. Some are businesses.
+Some are tools. All of them are how I keep product judgment honest.</p>
 
-<h2>The thesis</h2>
-
-<p>Every marketplace I care about has the same bottleneck, and it is never the software.
-It is <mark>supply-side liquidity and regulatory gating.</mark> Getting sellers onto the platform
-and keeping them compliant is the hard part. The app is the easy part, which is exactly why
-so many people build the app first.</p>
-
-<p>I learned that the expensive way. Years ago I spent about a year setting up a fast-food
-business in India: a small idli concept with a model that stretched across dine-in, delivery,
-catering, franchising, and cloud kitchens. I registered the domains. I built out the plan.
-It closed at a loss.</p>
-
-<p>What I took from it was not that food is hard. It was that I had solved the wrong problem
-carefully. Everything I build now starts from the constraint rather than the interface.</p>
-
-<h2>Projects</h2>
+<h2>Business Ventures &amp; Innovations</h2>
 
 <div class="project">
-  <div class="meta">live in production &middot; solo</div>
-  <h3><a href="https://homemade-hub.com">Homemade</a></h3>
-  <p>A hyperlocal two-sided marketplace connecting home cooks with people nearby who want to
-  eat what they make. Next.js and TypeScript on Vercel, PostgreSQL on Supabase.
-  I designed it, built it, secured it, deployed it, and I operate it.</p>
-  <p>It is running as a pilot with a handful of cooks in a single ZIP code. That is deliberate.
-  I would rather learn what actually breaks at three cooks than guess at three hundred.</p>
-  <div class="thesis">The second attempt at a market I already paid tuition in. Built around
-  the supply side and the compliance surface first, with the customer experience following
-  from those constraints instead of the other way round.</div>
-  <p class="small muted" style="margin-top:16px">The engineering decision I am most attached to:
-  authorisation lives in the database as row-level security rather than in the application layer.
-  Not because it is more elegant, but because of the failure direction. A policy I forget to write
-  denies access. An application check I forget to write leaks data. When you are the only reviewer
-  on the team, you design for the mistake you can survive.</p>
+  <div class="meta">hospitality venture &middot; India</div>
+  <h3>Idli Point &amp; Chat Corner</h3>
+  <p>A South Indian hospitality concept I took from idea through brand, operations,
+  and a localized retail plan. Dine-in, delivery, catering, and a model that could
+  stretch into franchising and cloud kitchens.</p>
+  <ul>
+    <li>Brand identity and positioning for a regional concept with a clear product core.</li>
+    <li>Operational design: kitchen flow, service model, and day-to-day retail footprint.</li>
+    <li>Supply chain planning for perishable inventory and consistent product quality.</li>
+  </ul>
+  <div class="thesis">The expensive lesson: the hard problem was never the menu.
+  It was supply, location, and the operating system of a small business. Everything
+  I have built since starts from the constraint rather than the interface.</div>
 </div>
 
 <div class="project">
-  <div class="meta">side project</div>
-  <h3>RE Analyzer</h3>
-  <p>A housing inventory analysis tool built on ZIP-level listing data, with a pipeline that
-  ingests, normalises, and serves market signal at neighbourhood granularity.
-  FastAPI and Python, with an embedded SQLite-compatible database at the edge.</p>
-  <div class="thesis">An exercise in how cheap a real data product can be if you refuse to
-  over-provision. It runs for roughly a dollar a month. Every architecture decision is written
-  down with the alternative I rejected and why.</div>
+  <div class="meta">live in production &middot; solo</div>
+  <h3>SaaS &amp; Automation Tooling</h3>
+  <p>Custom workflow utilities, scraping pipelines, and site engines I design and
+  operate myself. The flagship is <a href="https://homemade-hub.com">Homemade</a>,
+  a hyperlocal marketplace connecting home cooks with people nearby.</p>
+  <ul>
+    <li>Homemade: Next.js and TypeScript on Vercel, PostgreSQL on Supabase. Designed, built, secured, deployed, and operated alone. Running as a deliberate single-ZIP pilot.</li>
+    <li>RE Analyzer: ZIP-level housing inventory analysis. FastAPI and Python, with an embedded SQLite-compatible database at the edge. Runs for roughly a dollar a month.</li>
+    <li>Workflow utilities and automated site engines that turn repetitive operational work into a configuration problem.</li>
+  </ul>
+  <div class="thesis">Authorisation on Homemade lives in the database as row-level security
+  rather than in the application layer. Not because it is more elegant, but because of the
+  failure direction. A policy I forget to write denies access. An application check I forget
+  to write leaks data.</div>
+</div>
+
+<div class="project">
+  <div class="meta">prototypes &amp; edge work</div>
+  <h3>AI Experiments &amp; Edge Applications</h3>
+  <p>Prototyping web applications that combine custom interface work, edge-device
+  intelligence, and a modern web stack. Local inference, automation scripts, and
+  interfaces that do not wait on a round trip when they do not have to.</p>
+  <ul>
+    <li>Local LLM inference and hardware-aware tooling when cloud latency or privacy is the constraint.</li>
+    <li>Data pipelines and automation that sit next to the model instead of around a slide deck.</li>
+    <li>Interface experiments: motion, interaction, and UI that make an intelligent system usable.</li>
+  </ul>
+  <p class="focus">Applied AI &middot; Edge computing &middot; Modern web systems</p>
 </div>
 
 <h2>Why I keep doing this</h2>
@@ -85,9 +86,9 @@ carefully. Everything I build now starts from the constraint rather than the int
 work and I am good at it. But there is a gap between reviewing a design and living with one, and
 the only way I know to close it is to ship something end to end and then run it for a while.</p>
 
-<p>Everything on this page is small. None of it is where my ambition is. What it does is keep me
-honest about what production actually costs, so that when I tell a team their approach will not
-survive contact with real users, I am speaking from something more recent than memory.</p>
+<p>Everything on this page is small on purpose. None of it is where my ambition is. What it does
+is keep me honest about what production actually costs, so that when I tell a team their approach
+will not survive contact with real users, I am speaking from something more recent than memory.</p>
 </main>
 <footer class="foot">
   <a href="mailto:vinay.ambal@gmail.com">Email</a>

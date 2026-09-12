@@ -19,33 +19,11 @@ Do not delete it.
 
 ```
 index.html            About. The front page.
-work/index.html       Experience and technical depth.
-building/index.html   Homemade, RE Analyzer, and the thesis behind them.
-writing/index.html    Blog index. Currently an empty state with the queued topics.
-writing/_template/    Copy this to start a post.
+work/index.html       Enterprise initiatives, experience, and technical depth.
+building/index.html   Enterprise & Ventures — hospitality, SaaS, and AI experiments.
 404.html              Not-found page. GitHub Pages uses this automatically.
 style.css             Everything visual. Design tokens at the top.
 ```
-
-## Adding a post
-
-```
-cp -r writing/_template writing/your-post-slug
-```
-
-Edit `writing/your-post-slug/index.html`, then add a row to the list in `writing/index.html`:
-
-```html
-<div class="row">
-  <div class="when">Oct 2026</div>
-  <div class="body">
-    <h3><a href="/writing/your-post-slug/">Post title</a></h3>
-    <p>One sentence on what it argues.</p>
-  </div>
-</div>
-```
-
-Delete the `<div class="empty">` block once you have two or three posts up.
 
 ## Changing the look
 
@@ -63,4 +41,4 @@ Then point a CNAME record at `vinay-dwbi.github.io` in your DNS. Settings → Pa
 
 ## Before you publish
 
-See `CONTENT-NOTES.md`. Two judgment calls in there are worth thirty seconds of your time.
+See `CONTENT-NOTES.md`. A few judgment calls in there are worth thirty seconds of your time.

@@ -1,29 +1,28 @@
-# vinay-dwbi.github.io
+# vinay-ambal.github.io
 
 Personal site. Plain HTML and one stylesheet. No framework, no build step, no dependencies.
-Edit a file, commit, done.
+Edit a file, commit, push, done.
 
 ## Deploying
 
-1. On GitHub, create a repository named exactly **`vinay-dwbi.github.io`** (must match your
-   username or it will not publish at the root domain).
-2. Upload the contents of this folder to the repository root. Not the folder itself, the
-   contents. `index.html` must sit at the top level.
-3. Settings → Pages → Source: **Deploy from a branch**, branch `main`, folder `/ (root)`.
-4. Wait a minute or two. The site is live at `https://vinay-dwbi.github.io`.
+GitHub Pages serves the `main` branch from the repository root
+(Settings → Pages → Source: **Deploy from a branch**, branch `main`, folder `/ (root)`).
+A push to `main` is live at `https://vinay-ambal.github.io` within a minute or two.
 
-`.nojekyll` is included so GitHub serves the files as-is instead of running them through Jekyll.
-Do not delete it.
+The empty `.nojekyll` file tells GitHub to serve the files as they are instead of running
+them through Jekyll. Do not delete it.
 
 ## Structure
 
 ```
 index.html            About. The front page.
-work/index.html       Enterprise initiatives, experience, and technical depth.
-building/index.html   Enterprise & Ventures — hospitality, SaaS, and AI experiments.
+work/index.html       Selected work, experience, technical depth, education.
+building/index.html   Ventures. The URL stays /building/ so older links keep working.
 404.html              Not-found page. GitHub Pages uses this automatically.
 style.css             Everything visual. Design tokens at the top.
 ```
+
+Every page carries the same header, nav, and footer. If you change one, change all four.
 
 ## Changing the look
 
@@ -37,8 +36,8 @@ because a toggle is a control nobody asked for.
 ## Custom domain, if you ever want one
 
 Add a file named `CNAME` at the root containing just your domain, e.g. `vinayambalihalli.com`.
-Then point a CNAME record at `vinay-dwbi.github.io` in your DNS. Settings → Pages will confirm.
+Then point a CNAME record at `vinay-ambal.github.io` in your DNS. Settings → Pages will confirm.
 
 ## Before you publish
 
-See `CONTENT-NOTES.md`. A few judgment calls in there are worth thirty seconds of your time.
+See `CONTENT-NOTES.md` for the content rules and the check to run before every push.

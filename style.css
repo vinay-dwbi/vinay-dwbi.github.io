@@ -1,4 +1,4 @@
-/* Vinay Ambalihalli — personal site
+/* Vinay Ambalihalli: personal site
    One stylesheet. Edit tokens below to change everything. */
 
 :root{
@@ -77,7 +77,7 @@ li{margin-bottom:7px}
 /* dated / titled rows */
 .row{display:flex;gap:22px;padding:19px 0;border-top:1px solid var(--rule-soft);align-items:baseline}
 .row:first-of-type{border-top:1px solid var(--rule)}
-.row .when{font-family:var(--mono);font-size:12.5px;color:var(--ink3);flex:0 0 84px;padding-top:4px;
+.row .when{font-family:var(--mono);font-size:12.5px;color:var(--ink3);flex:0 0 150px;padding-top:4px;
   font-variant-numeric:tabular-nums}
 .row .body{flex:1;min-width:0}
 .row p{margin:4px 0 0;font-size:15px;color:var(--ink2);line-height:1.6}

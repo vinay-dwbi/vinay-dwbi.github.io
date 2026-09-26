@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Work — Vinay Ambalihalli</title>
-<meta name="description" content="Enterprise initiatives and twenty years across healthcare, financial services, and applied AI.">
-<meta property="og:title" content="Work — Vinay Ambalihalli">
-<meta property="og:description" content="Enterprise initiatives and twenty years across healthcare, financial services, and applied AI.">
+<title>Work | Vinay Ambalihalli</title>
+<meta name="description" content="Selected work, experience, and technical depth in data engineering, lakehouse, streaming, and ML.">
+<meta property="og:title" content="Work | Vinay Ambalihalli">
+<meta property="og:description" content="Selected work, experience, and technical depth in data engineering, lakehouse, streaming, and ML.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#FBFBFC" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0F1114" media="(prefers-color-scheme: dark)">
@@ -22,56 +22,65 @@
   <nav>
     <a href="/">About</a>
     <a href="/work/" aria-current="page">Work</a>
-    <a href="/building/">Enterprise &amp; Ventures</a>
+    <a href="/building/">Ventures</a>
   </nav>
 </header>
 <main>
 <h1>Work</h1>
 
-<p class="lede">Enterprise systems, product architecture, and applied AI.
-Featured initiatives first. The career path is below. The
-<a href="mailto:vinay.ambal@gmail.com">full résumé</a> is a better fit for detail.</p>
+<p class="lede">Selected work first, then the roles, then the tools.
+Every technology named here is one I have used.</p>
 
-<h2>Enterprise Initiatives</h2>
+<h2>Selected work</h2>
 
 <div class="project">
-  <!-- TODO: confirm. Dataset supports a CRM and BI framework (programs, contacts, financials, lead confidence scoring, program alerts, speaker notifications, comment tracking) adopted as system of record. It does not mention product architecture, partner onboarding, or international speaker rosters. -->
-  <div class="meta">Kaiser Permanente International &middot; Healthcare</div>
-  <h3>Enterprise CRM &amp; Customer Intelligence</h3>
-  <p>Spearheaded product architecture and software delivery for an end-to-end CRM
-  platform tailored to Kaiser Permanente International.</p>
-  <ul>
-    <li>Managed full lead lifecycles, international speaker rosters, and strategic customer pipelines.</li>
-    <li>Streamlined partner onboarding and automated the business-development workflows around it.</li>
-    <li>Became the operational system of record for a regulated, multi-market health organisation.</li>
-  </ul>
-  <p class="focus">Product design &middot; Business operations automation &middot; Lead management systems</p>
+  <div class="meta">eHealth</div>
+  <h3>Customer identity resolution</h3>
+  <p>The same person reaches us three ways: as an application in the back office, as a web lead
+  in Adobe clickstream, and as an inbound phone call. Each source describes them differently,
+  and none of them is wrong on its own terms.</p>
+  <p>I rebuilt the process that resolves them to a single Master ID. It moved from Oracle to
+  Snowflake on Databricks, and rule-based matching gave way to ML-based matching with H2O.ai on
+  distributed compute. Validating the rewrite also found defects in the legacy logic. The new
+  process refreshes more often and matches more accurately.</p>
+  <p class="focus">Identity resolution &middot; Machine learning &middot; Snowflake &middot; Databricks</p>
 </div>
 
 <div class="project">
-  <!-- TODO: confirm. Building Plan Review Portal and commercial real estate are not in the dataset. Keep only if built; otherwise remove. -->
-  <div class="meta">TIAA &middot; Financial real estate</div>
-  <h3>Automated Building Plan Review Portal</h3>
-  <p>Designed and engineered a centralized, multi-tenant portal for commercial real
-  estate and asset management operations.</p>
-  <ul>
-    <li>Digitized multi-stage architectural review, compliance tracking, and document collaboration.</li>
-    <li>Connected engineering teams, external reviewers, and business stakeholders on one process.</li>
-    <li>Built a scalable workflow engine for a regulated, document-heavy review cycle.</li>
-  </ul>
-  <p class="focus">Enterprise software engineering &middot; Scalable workflow engines &middot; Compliance architecture</p>
+  <div class="meta">eHealth</div>
+  <h3>New sources as configuration</h3>
+  <p>When every new source is a bespoke project, the tenth costs what the first did. I built a
+  component library so that a new source is a configuration entry.</p>
+  <p>A parameterized ingestion component creates Snowflake tables dynamically and normalizes
+  naming. A count-validation wrapper reconciles every load. Backup tables follow a standard that
+  carries provenance and retention metadata. The data dictionary generates itself into
+  Confluence.</p>
+  <p class="focus">Ingestion &middot; Reconciliation &middot; Metadata</p>
 </div>
 
 <div class="project">
-  <div class="meta">Applied across roles &amp; independent work</div>
-  <h3>Modern AI/ML &amp; Intelligent Systems</h3>
-  <p>Applied machine learning and data pipelines, including retrieval-augmented
-  generation over enterprise context.</p>
-  <ul>
-    <li>Technical design of AI-driven tools and data-engineering workflows that hold up in production.</li>
-    <li>Production ML for entity resolution, plus retrieval-augmented generation over enterprise context.</li>
-  </ul>
-  <p class="focus">Applied AI &middot; Data engineering &middot; Entity resolution</p>
+  <div class="meta">eHealth</div>
+  <h3>Off the nightly batch, with governance built in</h3>
+  <p>I joined as the platform was moving off on-premises infrastructure. Since then the Oracle
+  warehouse and WhereScape ETL have moved to Snowflake on AWS with lineage and governance in
+  place. Change-data capture through Attunity and Kafka replaced nightly batch, and Matillion
+  and Databricks pipelines unblocked data science.</p>
+  <p>In Looker, object-level and row-level security are defined in LookML, so access rules live
+  in one place. I own SOX compliance for everything the data engineering team ships.</p>
+  <p class="focus">Streaming &middot; CDC &middot; Governance &middot; SOX</p>
+</div>
+
+<div class="project">
+  <div class="meta">Kaiser Permanente</div>
+  <h3>Pharmacy data warehouse</h3>
+  <p>At a health plan with more than ten million members, every change to pharmacy data runs
+  through HIPAA change control. I designed, built, and extended the pharmacy data warehouse,
+  integrating prescription, formulary, patient, and general ledger finance data downstream of
+  the pharmacy claims systems.</p>
+  <p>I moved cron-based orchestration to Apache Airflow with parameterized DAGs, which cut manual
+  monitoring effort by 30%, and delivered the Oracle 12c and Exadata migration alongside an ETL
+  upgrade.</p>
+  <p class="focus">Healthcare data &middot; Airflow &middot; Oracle</p>
 </div>
 
 <h2>Experience</h2>
@@ -80,17 +89,16 @@ Featured initiatives first. The career path is below. The
   <div class="when">Mar 2020 to present</div>
   <div class="body">
     <h3>Staff Data Engineer</h3>
-    <div class="where">eHealth, Inc. &middot; Santa Clara, California (Remote)</div>
-    <p>Architecture and governance owner for the enterprise data platform behind a national
-    health insurance marketplace covering Medicare, Medicaid supplement, individual and family,
-    small group, and ICHRA. A Snowflake and Databricks lakehouse fed by change-data capture,
-    streaming, and batch integration from a microservices estate.</p>
-    <p>I own architecture review and approval, data governance, and SOX compliance for everything
-    the data engineering team ships. I lead a subset of the data organisation day to day and have
-    run onshore and offshore delivery teams on our customer and partner data programmes.</p>
-    <p>The work I am proudest of: rebuilding customer identity resolution to unify records across
-    transactional, web, and telephony channels, and building the component library that turned
-    onboarding a new source from a bespoke engineering project into a configuration exercise.</p>
+    <div class="where">eHealth, Inc. &middot; Santa Clara, CA (Remote)</div>
+    <p>Architecture and governance owner for the data platform behind a national health insurance
+    marketplace covering Medicare, individual and family, small group, and ICHRA plans. I joined
+    as the platform moved off on-premises infrastructure and have been there for the whole
+    transition. I review and approve architecture decisions, lead data governance, and own SOX
+    compliance for data engineering deliverables.</p>
+    <p>From April 2024 to January 2026 I managed five data engineers across the US and China,
+    from entry level through Staff, and owned sprint planning, delivery, and performance. I have
+    also led onshore and offshore delivery on customer and partner data marts, and built ML
+    solutions and retrieval-augmented generation over enterprise data.</p>
   </div>
 </div>
 
@@ -98,14 +106,12 @@ Featured initiatives first. The career path is below. The
   <div class="when">Mar 2017 to Mar 2020</div>
   <div class="body">
     <h3>Sr. Architect, Pharmacy Data Warehouse</h3>
-    <div class="where">Kaiser Permanente &middot; Pleasanton, California</div>
-    <p>Architected and operated the pharmacy data warehouse for an integrated health plan serving
-    more than ten million members, integrating prescription, formulary, patient, and finance data
-    downstream of the pharmacy claims systems.</p>
-    <p>Migrated brittle cron-based orchestration to Apache Airflow with parameterised DAGs, and
-    designed the CRM platform Kaiser Permanente International adopted as its operational system
-    of record. All of it under HIPAA change control, which teaches you fast that traceability
-    is a design constraint rather than paperwork.</p>
+    <div class="where">Kaiser Permanente &middot; Pleasanton, CA</div>
+    <p>Owned the pharmacy data warehouse described above. I also built a CRM and BI framework for
+    Kaiser Permanente International covering programs, contacts, financials, lead confidence
+    scoring, program alerts, speaker notifications, and comment tracking, and it became the team's
+    system of record. Upstream integration ran through API and SOAP interfaces, and reporting went
+    out through automated bursting and email distribution.</p>
   </div>
 </div>
 
@@ -113,8 +119,7 @@ Featured initiatives first. The career path is below. The
   <div class="when">Oct 2016 to Feb 2017</div>
   <div class="body">
     <h3>Solutions Architect</h3>
-    <div class="where">Trane &middot; La Crosse, Wisconsin</div>
-    <!-- TODO: confirm. The dataset records only "platform roadmap and business-case work" for Trane. -->
+    <div class="where">Trane &middot; La Crosse, WI</div>
     <p>A short engagement on platform roadmap and business-case work.</p>
   </div>
 </div>
@@ -123,14 +128,14 @@ Featured initiatives first. The career path is below. The
   <div class="when">Feb 2013 to Sep 2016</div>
   <div class="body">
     <h3>Manager, Data &amp; BI (Retail &amp; Merchandising)</h3>
-    <div class="where">Belk &middot; Charlotte, North Carolina</div>
-    <p>Led a hybrid onshore and offshore team of eight delivering data engineering and analytics
-    across merchandising, allocation, pricing, invoice match, and store sales. Owned requirements,
-    design, estimation, and delivery, and worked directly with merchandising leadership on the
-    platform roadmap.</p>
-    <p>Wrote the business case for the enterprise BI platform and data lake migration. That was the
-    first time I had to argue for a platform investment in the language of the people paying for it,
-    and it changed how I think about architecture.</p>
+    <div class="where">Belk &middot; Charlotte, NC</div>
+    <p>I managed an onshore and offshore team of eight across merchandising, allocation, pricing,
+    invoice match, purchase order management, and store sales, working directly with the general
+    and divisional merchandise managers on requirements and roadmap.</p>
+    <p>I wrote the roadmap and business case for the enterprise BI platform and data lake
+    migration, which was projected to save about $1M over four years. We cut project delivery
+    timelines by 20%, automated operational reporting to more than 400 store managers through
+    Oracle BI Publisher, and stood up an in-house Tableau service for self-service analytics.</p>
   </div>
 </div>
 
@@ -138,14 +143,12 @@ Featured initiatives first. The career path is below. The
   <div class="when">Feb 2009 to Dec 2012</div>
   <div class="body">
     <h3>Sr. Software Engineer (Contract)</h3>
-    <div class="where">TIAA &middot; Charlotte, North Carolina</div>
-    <!-- TODO: confirm. Building Plan Review Portal and commercial real estate are not in the dataset. -->
-    <p>Onsite lead for analytics and enterprise workflow systems supporting retirement plan
-    administration and commercial real estate operations. Designed the multi-tenant Building
-    Plan Review Portal that digitized architectural review, compliance tracking, and document
-    collaboration across engineering, external reviewers, and business stakeholders.</p>
-    <p>Also owned plan lifecycle reporting and automated distribution to plan administrators.
-    Regulated work, where being wrong has consequences beyond a broken dashboard.</p>
+    <div class="where">TIAA &middot; Charlotte, NC</div>
+    <p>Onsite lead for the analytics platform behind retirement plan administration: plan
+    lifecycle management, institutional reporting, and automated distribution to plan
+    administrators. I delivered the OBIEE 10g to 11g upgrade, built the data catalog and
+    source-to-target mappings, extended the dimensional model, and produced ERISA reporting with
+    PDF, Excel, and CSV bursting.</p>
   </div>
 </div>
 
@@ -154,9 +157,10 @@ Featured initiatives first. The career path is below. The
   <div class="body">
     <h3>Software Engineer</h3>
     <div class="where">Cognizant &middot; Bangalore, India</div>
-    <p>Where I learned the craft. CRM, data warehouse, and analytics delivery for clients in
-    financial services, logistics, telecommunications, and media across North America and
-    Asia-Pacific.</p>
+    <p>Where I learned the craft: CRM, data warehouse, and analytics delivery across financial
+    services, logistics, telecommunications, and media, for clients including Franklin Templeton,
+    DHL, and The New York Times. Siebel Analytics (later OBIEE), Informatica, and Oracle.
+    I earned my Oracle certifications here in 2006.</p>
   </div>
 </div>
 
@@ -165,31 +169,31 @@ Featured initiatives first. The career path is below. The
 <div class="skills">
 <dl>
   <dt>Data platforms</dt>
-  <dd>Snowflake, Databricks, Delta Lake, PostgreSQL, Oracle, Teradata, MySQL, DocumentDB. Warehouse and lakehouse design, dimensional and canonical modelling.</dd>
+  <dd>Snowflake, Databricks, Oracle (including Exadata), Teradata, MySQL, DocumentDB, PostgreSQL. Warehouse and lakehouse design, dimensional modeling (ERwin).</dd>
 
   <dt>Processing</dt>
-  <dd>Apache Spark and PySpark, including the parts that matter in production: partitioning strategy, shuffle reduction, memory configuration, and reading a DAG when a job that ran fine yesterday does not.</dd>
+  <dd>Apache Spark on Databricks.<!-- TODO: confirm. The old line on partitioning strategy, shuffle reduction, and memory configuration is not in the dataset. --></dd>
 
   <dt>Integration</dt>
-  <dd>Kafka, change-data capture, Apache Airflow, Matillion, Informatica. Real-time, near-real-time, and batch, and knowing which one a problem actually needs.</dd>
+  <dd>Kafka, Attunity CDC, Apache Airflow, Matillion, WhereScape, Informatica, IBM DataStage. Real-time, near-real-time, and batch, and knowing which one a problem actually needs.</dd>
 
   <dt>Languages</dt>
-  <dd>Python, SQL, PL/SQL, shell, JavaScript, TypeScript.</dd>
+  <dd>Python, SQL, PL/SQL.<!-- TODO: confirm shell and JavaScript before listing them. --></dd>
 
   <dt>Cloud</dt>
-  <dd>AWS (Lambda, S3, SQS, EC2), Docker, Git and GitHub, CI/CD, serverless deployment.</dd>
-
-  <dt>Quality and governance</dt>
-  <dd>Reconciliation and count-validation frameworks, lineage, automated data dictionaries, row-level and object-level security, SOX compliance ownership, regulated SDLC and change management.</dd>
+  <dd>Snowflake and Databricks on AWS.<!-- TODO: confirm AWS Lambda, S3, SQS, EC2, and Docker before listing them. --></dd>
 
   <dt>Machine learning</dt>
-  <dd>Production ML pipelines, ML-based entity resolution on distributed compute, and retrieval-augmented generation over enterprise context.</dd>
+  <dd>ML-based entity resolution with H2O.ai on distributed compute, and retrieval-augmented generation over enterprise data.</dd>
+
+  <dt>Quality and governance</dt>
+  <dd>Reconciliation and count validation, lineage, generated data dictionaries, provenance and retention metadata, row-level and object-level security, SOX compliance ownership, HIPAA-governed change management.</dd>
 
   <dt>Analytics</dt>
-  <dd>Looker and LookML, Tableau, OBIEE and BI Publisher. Semantic layer design and self-service enablement.</dd>
+  <dd>Looker and LookML, Tableau, OBIEE, BI Publisher, Adobe Analytics clickstream data.</dd>
 
-  <dt>Product and leadership</dt>
-  <dd>Architecture review and approval, product vision, stakeholder management, onshore and offshore delivery, estimation, mentoring, and aligning engineering with business development goals.</dd>
+  <dt>Leadership</dt>
+  <dd>Architecture review and approval, people management, sprint planning, estimation, and onshore and offshore delivery.</dd>
 </dl>
 </div>
 
@@ -200,7 +204,7 @@ Oracle Certified, Business Intelligence (OBIEE) Server Architect and Analytics A
 </main>
 <footer class="foot">
   <a href="mailto:vinay.ambal@gmail.com">Email</a>
-  <a href="https://linkedin.com/in/vinayambalihalli">LinkedIn</a>
+  <a href="https://www.linkedin.com/in/vinayambalihalli">LinkedIn</a>
   <a href="https://github.com/vinay-ambal">GitHub</a>
   <span class="place">Pleasanton, California</span>
 </footer>

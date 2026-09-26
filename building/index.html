@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Enterprise &amp; Ventures — Vinay Ambalihalli</title>
-<meta name="description" content="Ventures, systems, and initiatives built outside the core enterprise role: hospitality, SaaS, and AI experiments.">
-<meta property="og:title" content="Enterprise &amp; Ventures — Vinay Ambalihalli">
-<meta property="og:description" content="Ventures, systems, and initiatives built outside the core enterprise role: hospitality, SaaS, and AI experiments.">
+<title>Ventures | Vinay Ambalihalli</title>
+<meta name="description" content="Things I build on my own: a marketplace in development, a housing analytics tool, AI experiments, and an earlier food business.">
+<meta property="og:title" content="Ventures | Vinay Ambalihalli">
+<meta property="og:description" content="Things I build on my own: a marketplace in development, a housing analytics tool, AI experiments, and an earlier food business.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#FBFBFC" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0F1114" media="(prefers-color-scheme: dark)">
@@ -22,65 +22,62 @@
   <nav>
     <a href="/">About</a>
     <a href="/work/">Work</a>
-    <a href="/building/" aria-current="page">Enterprise &amp; Ventures</a>
+    <a href="/building/" aria-current="page">Ventures</a>
   </nav>
 </header>
 <main>
-<h1>Enterprise Venture &amp; Solo Project</h1>
+<h1>Ventures</h1>
 
-<p class="lede">Ventures, systems, and initiatives I have built outside my core enterprise role.
-All of them keep product engineering, operations judgment,
-and design execution rooted in real-world delivery.</p>
-
-<h2>Key Ventures &amp; Initiatives</h2>
+<p class="lede">Outside the day job I build small things of my own. They are how I keep my hands
+on real code and real trade-offs. They are not where my ambition is.</p>
 
 <div class="project">
-  <div class="meta">Mid 2024&ndash;present</div>
-  <h3>Idli Point &amp; Chat Corner</h3>
-  <div class="role">Founding Principal &amp; Operational Strategist</div>
-  <p>A fast-food South Indian restaurant concept built to deliver authentic cuisine
-  at accessible prices, scaled for dine-in, delivery, and mobile-first ordering.</p>
-  <ul>
-    <li><strong>Vision &amp; strategy.</strong> A scalable quick-service model around South Indian staples &mdash; Tatte Idli, Medu Vada, Kesari Bath &mdash; designed for high throughput and fast order fulfillment.</li>
-    <li><strong>Operational design.</strong> Kitchen workflows, floor layout, customer ordering touchpoints, and localized delivery integrations that keep turnaround short without compromising quality.</li>
-    <li><strong>Brand &amp; footprint.</strong> End-to-end brand identity, packaging, menu engineering, and localized retail site strategy, with a path to franchising and cloud-kitchen expansion.</li>
-  </ul>
-  <div class="thesis">The core challenge of retail hospitality is never just the product.
-  It is supply chain logistics, footprint economics, and operating efficiency under load.</div>
+  <div class="meta">in development</div>
+  <h3>A two-sided local marketplace</h3>
+  <p>The interesting part is not the marketplace. It is who can see what.</p>
+  <p>I put authorization in the database, as row-level security, rather than in application
+  code. The reason is failure direction: a missed row-level policy denies access, while a missed
+  application check leaks data. I would rather ship a bug that locks someone out than one that
+  shows them someone else's data.</p>
+  <p>User requests and system jobs reach the data on separate paths. A user request carries
+  that user's identity, and the database enforces what the identity can see. System work runs on
+  a separate privileged path, and lint rules on imports keep application code from reaching for
+  it. A per-role test suite checks the row-level policies before changes ship.</p>
+  <p class="focus">PostgreSQL &middot; Row-level security &middot; Access design</p>
 </div>
 
-<h2>SaaS &amp; Experiments</h2>
-
 <div class="project">
-  <div class="meta">independent</div>
-  <h3>SaaS &amp; Automation Tooling</h3>
-  <div class="role">Architect &amp; Developer</div>
-  <p>Small products I design, build, and run myself.</p>
-  <ul>
-    <li><strong>RE Analyzer.</strong> A ZIP-level housing inventory analytics tool on FastAPI, Python, and libSQL. It runs for about a dollar a month, with its architecture decisions written down.</li>
-  </ul>
+  <div class="meta">running</div>
+  <h3>Housing inventory analytics</h3>
+  <p>A ZIP-level housing inventory analytics tool built on Python, FastAPI, and libSQL. It runs
+  for about a dollar a month. Each of its eight architecture decisions is written down along with
+  the alternatives I considered.</p>
+  <p class="focus">Python &middot; FastAPI &middot; libSQL &middot; Architecture decision records</p>
 </div>
 
 <div class="project">
   <div class="meta">prototypes</div>
-  <h3>AI Experiments</h3>
-  <div class="role">System Design &amp; Prototyping</div>
-  <p>Hands-on work with retrieval-augmented generation over enterprise-style data.</p>
+  <h3>AI experiments</h3>
+  <p>Retrieval-augmented generation over enterprise-style data.</p>
+  <!-- TODO: link the agent data-access proof of concept here once its repo is public and it runs end to end. -->
 </div>
 
-<h2>Perspective</h2>
+<div class="project">
+  <div class="meta">earlier</div>
+  <h3>A quick-service food business in India</h3>
+  <p>I built it from the brand through the supply chain. It taught me where the hard parts are,
+  and they were not the app. They were supply-side reliability, footprint economics, and
+  regulatory gating. I count what it cost as tuition.</p>
+</div>
 
-<p>Building software at scale for large enterprises is core to what I do. Running
-end-to-end ventures &mdash; where a supply-chain error, a system outage, or a poor
-user experience shows up immediately &mdash; keeps the architecture decisions pragmatic.</p>
+<h2>Why I do this</h2>
 
-<p>These initiatives are how I stay close to recent, real-world execution. When I
-design a system or lead a team, I want that judgment to come from something more
-current than memory.</p>
+<p>Building for large enterprises is the core of what I do. Building my own things, where a bad
+decision shows up right away and I pay for it, keeps my architecture calls practical.</p>
 </main>
 <footer class="foot">
   <a href="mailto:vinay.ambal@gmail.com">Email</a>
-  <a href="https://linkedin.com/in/vinayambalihalli">LinkedIn</a>
+  <a href="https://www.linkedin.com/in/vinayambalihalli">LinkedIn</a>
   <a href="https://github.com/vinay-ambal">GitHub</a>
   <span class="place">Pleasanton, California</span>
 </footer>

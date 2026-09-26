@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About · Vinay Ambalihalli</title>
+<meta name="description" content="Data platform architect. Experience, skills, and education.">
+<link rel="canonical" href="https://vinay-ambal.github.io/about/">
+<meta property="og:title" content="About · Vinay Ambalihalli">
+<meta property="og:description" content="Data platform architect. Experience, skills, and education.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vinay-ambal.github.io/about/">
+<meta name="theme-color" content="#C2410C" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#9A3412" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Vinay Ambalihalli, home">
+      <span class="mono-mark" aria-hidden="true">VA</span>
+      <span class="brand-name">Vinay Ambalihalli</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/">Essay</a>
+      <a href="/#writing">Writing</a>
+      <a href="/about/" aria-current="page">About</a>
+      <a href="/building/">Ventures</a>
+      <a class="pill" href="mailto:vinay.ambal@gmail.com">Email me</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+<article class="resume">
+<h1>Vinay Ambalihalli</h1>
+<p class="role">Data Platform Architect · Pleasanton, California</p>
+<p class="contact">
+<a href="mailto:vinay.ambal@gmail.com">vinay.ambal@gmail.com</a>
+<a href="https://www.linkedin.com/in/vinayambalihalli" rel="me">LinkedIn</a>
+<a href="https://github.com/vinay-ambal" rel="me">GitHub</a>
+<a href="https://medium.com/@anp.vinay" rel="me">Medium</a>
+</p>
+
+<section aria-labelledby="summary">
+<h2 id="summary">Summary</h2>
+<p>More than twenty years of designing and running enterprise data platforms, most of them in healthcare and insurance. The work centers on lakehouse architecture, streaming ingestion, identity resolution, and governance that holds up under audit. Outside the day job, small products built end to end, from the data model to the security model to the code.</p>
+</section>
+
+<section aria-labelledby="experience">
+<h2 id="experience">Experience</h2>
+<div class="job">
+<div class="job-head"><h3>eHealth, Inc.</h3><span class="when">Mar 2020 to present</span></div>
+<p class="title">Staff Data Engineer <span>· Santa Clara, CA (Remote)</span></p>
+<ul>
+<li>Architecture and governance owner for the Snowflake and Databricks lakehouse behind a national health insurance marketplace.</li>
+<li>Migrated the legacy Oracle warehouse and WhereScape ETL to Snowflake on AWS, and moved ingestion from nightly batch to Kafka and CDC streaming.</li>
+<li>Built shared ingestion standards: parameterized loads, automated reconciliation, and generated data dictionaries, so new sources onboard as configuration rather than new code.</li>
+<li>Rebuilt customer unification into one Master ID across application, clickstream, and telephony channels, replacing rule-based matching with ML scoring.</li>
+<li>Owns SOX compliance for data engineering deliverables; designed object-level and row-level security so BI users see only what they are entitled to.</li>
+<li>Managed five data engineers across the US and China, entry level through Staff (2024 to 2026).</li>
+</ul>
+</div>
+<div class="job">
+<div class="job-head"><h3>Kaiser Permanente</h3><span class="when">Mar 2017 to Mar 2020</span></div>
+<p class="title">Sr. Architect, Pharmacy Data Warehouse <span>· Pleasanton, CA</span></p>
+<ul>
+<li>Designed and built the Pharmacy Data Warehouse for an integrated health plan with 10M+ members, bringing together prescription, formulary, patient, and finance data.</li>
+<li>Moved cron-based orchestration to Apache Airflow with parameterized DAGs, cutting manual monitoring effort 30%.</li>
+<li>Built a CRM and BI framework for KP International that the team adopted as its operational system of record.</li>
+<li>Ran SDLC and change control in a HIPAA-governed environment; led the Oracle 12c and Exadata migration.</li>
+</ul>
+</div>
+<div class="job">
+<div class="job-head"><h3>Belk</h3><span class="when">Feb 2013 to Sep 2016</span></div>
+<p class="title">Manager, Data &amp; BI (Retail &amp; Merchandising) <span>· Charlotte, NC</span></p>
+<ul>
+<li>Led an onshore and offshore team of eight across merchandising, allocation, pricing, and store sales.</li>
+<li>Built the BI platform and data lake roadmap, with a projected ~$1M in savings over four years.</li>
+<li>Automated operational reporting to 400+ store managers and stood up an in-house Tableau service for self-service analytics.</li>
+</ul>
+</div>
+<div class="job">
+<div class="job-head"><h3>Earlier</h3></div>
+<ul class="plain">
+<li><strong>Trane</strong> · Solutions Architect · La Crosse, WI · Oct 2016 to Feb 2017</li>
+<li><strong>TIAA</strong> · Sr. Software Engineer (Contract) · Charlotte, NC · Feb 2009 to Dec 2012</li>
+<li><strong>Cognizant</strong> · Software Engineer · Bangalore, India · 2005 to 2008</li>
+</ul>
+</div>
+</section>
+
+<section aria-labelledby="independent">
+<h2 id="independent">Independent work</h2>
+<ul class="plain">
+<li><strong>A two-sided local marketplace</strong> (in development). Authorization in the database with PostgreSQL row-level security.</li>
+<li><strong>Housing inventory analytics</strong> (running). ZIP-level analytics on Python, FastAPI, and libSQL for about a dollar a month.</li>
+<li><strong>A quick-service restaurant in India</strong> (earlier). Built from brand through supply chain.</li>
+</ul>
+<p><a href="/building/">More on the Ventures page</a></p>
+</section>
+
+<section aria-labelledby="skills">
+<h2 id="skills">Skills</h2>
+<dl class="skills">
+<dt>Data architecture</dt><dd>Lakehouse and warehouse design; dimensional, canonical, and event modeling; identity resolution and master data</dd>
+<dt>Platforms</dt><dd>Snowflake, Databricks, AWS, Oracle (12c, Exadata), PostgreSQL, MySQL, Teradata</dd>
+<dt>Pipelines</dt><dd>Kafka, Attunity CDC (Qlik Replicate), Apache Airflow, Matillion, Informatica, WhereScape</dd>
+<dt>Governance</dt><dd>SOX compliance, lineage, row-level and object-level security, PHI and PII under HIPAA</dd>
+<dt>ML and AI</dt><dd>ML entity resolution (H2O.ai), retrieval-augmented generation over enterprise data</dd>
+<dt>Analytics</dt><dd>Looker and LookML, Tableau, OBIEE, Oracle BI Publisher</dd>
+<dt>Languages</dt><dd>SQL, Python (PySpark, pandas), PL/SQL, TypeScript, JavaScript, Shell</dd>
+</dl>
+</section>
+
+<section aria-labelledby="education">
+<h2 id="education">Education and certifications</h2>
+<ul class="plain">
+<li><strong>B.E., Electronics and Communications</strong> · Visvesvaraya Technological University, India</li>
+<li><strong>Product Management Program</strong> · Stanford Online</li>
+<li><strong>Oracle Certified</strong> · Business Intelligence (OBIEE) Server Architect and Analytics Application Developer</li>
+</ul>
+</section>
+
+<section aria-labelledby="outside">
+<h2 id="outside">Outside work</h2>
+<p>Chess and puzzles. An annual scholarship for students in a home village in Karnataka.</p>
+</section>
+</article>
+</div>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="who">Vinay Ambalihalli<span>Pleasanton, California</span></div>
+    <nav aria-label="Elsewhere">
+      <a href="mailto:vinay.ambal@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/vinayambalihalli" rel="me">LinkedIn</a>
+      <a href="https://github.com/vinay-ambal" rel="me">GitHub</a>
+      <a href="https://medium.com/@anp.vinay" rel="me">Medium</a>
+    </nav>
+    <div class="copy">© 2026 Vinay Ambalihalli · Plain HTML on GitHub Pages</div>
+  </div>
+</footer>
+</body>
+</html>

@@ -3,102 +3,114 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Vinay Ambalihalli</title>
-<meta name="description" content="Data platform architect. Data engineering, lakehouse, streaming, and ML.">
-<meta property="og:title" content="Vinay Ambalihalli">
-<meta property="og:description" content="Data platform architect. Data engineering, lakehouse, streaming, and ML.">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#FBFBFC" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0F1114" media="(prefers-color-scheme: dark)">
+<title>The Age of Enough · Vinay Ambalihalli</title>
+<meta name="description" content="An essay on learning, work, and worth: why an education built for survival no longer fits a world of abundance.">
+<link rel="canonical" href="https://vinay-ambal.github.io/">
+<meta property="og:title" content="The Age of Enough · Vinay Ambalihalli">
+<meta property="og:description" content="An essay on learning, work, and worth: why an education built for survival no longer fits a world of abundance.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://vinay-ambal.github.io/">
+<meta name="theme-color" content="#C2410C" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#9A3412" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<div class="page">
-<header class="mast">
-  <div class="name">Vinay Ambalihalli</div>
-  <nav>
-    <a href="/" aria-current="page">About</a>
-    <a href="/work/">Work</a>
-    <a href="/building/">Ventures</a>
-  </nav>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Vinay Ambalihalli, home">
+      <span class="mono-mark" aria-hidden="true">VA</span>
+      <span class="brand-name">Vinay Ambalihalli</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/" aria-current="page">Essay</a>
+      <a href="/#writing">Writing</a>
+      <a href="/about/">About</a>
+      <a href="/building/">Ventures</a>
+      <a class="pill" href="mailto:vinay.ambal@gmail.com">Email me</a>
+    </nav>
+  </div>
 </header>
-<main>
-<h1>Data platform architect. Data engineering, lakehouse, streaming, and ML.</h1>
-
-<p class="lede">For more than twenty years I have worked on one problem: making data trustworthy
-enough to act on. Lately it has a second half: making it safe enough for AI agents to use.</p>
-
-<h2>How I got here</h2>
-
-<p>I learned the craft at Cognizant in Bangalore, delivering CRM, warehousing, and analytics
-for clients in financial services, logistics, telecommunications, and media.</p>
-
-<p>At TIAA I worked on the analytics platform behind retirement plan administration.
-Regulated work, where a wrong number has consequences beyond a broken dashboard.</p>
-
-<p>At Belk I managed a team for the first time. I also wrote my first business case for a
-platform, which meant arguing for architecture in the language of the people paying for it.</p>
-
-<p>At Kaiser Permanente I built the pharmacy data warehouse for a health plan with more than
-ten million members. HIPAA change control taught me that traceability is a design constraint,
-not paperwork.</p>
-
-<p>Since 2020 I have owned a data platform end to end at eHealth: architecture, governance, and
-SOX compliance on a Snowflake and Databricks lakehouse. The problems I spend my time on are
-resolving one customer across channels that disagree about who that customer is, making a new
-source a configuration entry instead of new code, and making governance the default rather
-than an afterthought.</p>
-
-<p>The next consumer of that data is an AI agent. Agents need data they can trust and cannot
-misuse. That means <mark>the access path should fail closed</mark>: the agent carries the
-caller's identity, and the database decides what that identity can see.</p>
-
-<h2>What I believe about this work</h2>
-
-<p><strong>A new source should be a configuration entry, not a new codebase.</strong>
-If onboarding the sixth source costs what the first one did, the problem is architectural.
-Parameterize the ingestion, build reconciliation into every load, and the cost curve flattens.</p>
-
-<p><strong>Choose the design whose failures you can survive.</strong>
-When two approaches are close, the tiebreaker is what happens when you get it wrong.
-A missed row-level policy denies access. A missed application check leaks data.
-Let that asymmetry decide the architecture.</p>
-
-<p><strong>Data nobody trusts is worse than no data.</strong>
-Reconciliation, lineage, and a data dictionary somebody reads are not overhead.
-They are what make the work usable.</p>
-
-<p><strong>Stay close enough to build.</strong>
-I review designs and set standards. I also still write the code and tune the jobs.
-When I stop doing that, my architecture calls stop being credible.</p>
-
-<h2>Ventures</h2>
-
-<p>Outside work I build small things of my own: a housing analytics tool, a marketplace in
-development, AI experiments, and, earlier, a food business in India. They keep my hands on
-real code and real trade-offs. The <a href="/building/">Ventures</a> page has the details.</p>
-
-<h2>Outside the day job</h2>
-
-<p>I play chess, and I have never met a puzzle I could leave alone. Both come from the same
-instinct as the day job: look at the position, work out what is actually true, and commit.</p>
-
-<p>I fund an annual scholarship for students in my home village in Karnataka, and I volunteer
-when I can. Both give me a way to be useful beyond my own work.</p>
-
-<h2>Get in touch</h2>
-<p>The best way to reach me is <a href="mailto:vinay.ambal@gmail.com">email</a>.
-I am also on <a href="https://www.linkedin.com/in/vinayambalihalli">LinkedIn</a>.</p>
-</main>
-<footer class="foot">
-  <a href="mailto:vinay.ambal@gmail.com">Email</a>
-  <a href="https://www.linkedin.com/in/vinayambalihalli">LinkedIn</a>
-  <a href="https://github.com/vinay-ambal">GitHub</a>
-  <span class="place">Pleasanton, California</span>
-</footer>
+<main id="main">
+<div class="wrap">
+<div class="measure">
+<article class="essay" aria-labelledby="essay-title">
+<p class="eyebrow">An essay on learning, work, and worth</p>
+<!-- MEDIUM-ESSAY:START -->
+<h1 class="essay-title" id="essay-title">The Age of Enough</h1>
+<p class="essay-meta">A 7-minute read · <a href="https://medium.com/@anp.vinay" rel="noopener">Also on Medium ↗</a></p>
+<div class="essay-body">
+<h3>We spent two centuries learning to earn a living. Now we get to learn how to live.</h3>
+<h2>01 · The school we inherited</h2>
+<p>The classroom most of us sat in was designed for the factory. Bells marked the shifts. Desks stood in rows. Children moved through grades in batches, like parts along a line, and were graded on how well they produced the expected answer on time.</p>
+<p>It was not a cruel design. It was a practical one. For most of history, the central problem was survival: food, shelter, a steady wage. A system that turned out reliable workers solved that problem for millions of families, including mine.</p>
+<h2>02 · Survival was the curriculum</h2>
+<p>Look closely and the whole system rewards one thing: being useful to someone else. Grades told you whether a teacher approved. Degrees told an employer you could be trusted. Titles and salaries told everyone else how far you had climbed.</p>
+<p>Each of those was a proxy for the same question: will this person be able to earn a living? When survival was uncertain, that was the right question to ask. We built our self-worth on the answer.</p>
+<h2>03 · The math has changed</h2>
+<p>I have spent twenty years building data systems, and I have watched the cost of producing things fall, and then fall again. First machines took over physical work. Now software, and AI in particular, is taking over a large share of the thinking work that used to need a room full of people.</p>
+<p>We are not fully there yet, and the gains are not evenly shared. But the direction is clear. We are moving toward a world where survival is not the hard problem it once was. A world of abundance.</p>
+<h2>04 · When survival is solved, what is left to prove?</h2>
+<p>If a machine can produce the answer, being the person who produces the answer stops being impressive. The old scoreboards (the grade, the title, the number on the offer letter) lose their meaning, because they were keeping score of a game we no longer have to play.</p>
+<p>That can feel like a loss. I think it is a release. When there is nothing left to prove to the world, the only person left to prove anything to is yourself.</p>
+<blockquote>When there is nothing left to prove to the world, the only person left to prove anything to is yourself.</blockquote>
+<h2>05 · The only audience that counts</h2>
+<p>Proving your worth to yourself is harder than it sounds. There is no grade, no promotion, no applause. You have to decide what you stand for, hold yourself to it, and notice honestly when you fall short.</p>
+<p>I learned this the expensive way. Years ago I started a food business in India. By every outside measure, it did not work out. What I kept was more useful than the money: I knew I had built something real, I knew exactly where I had been wrong, and I did not need anyone to tell me either.</p>
+<h2>06 · Peace of mind is the new reward</h2>
+<p>If external validation was the reward system of scarcity, internal peace is the reward system of abundance. Not the absence of ambition, but ambition pointed inward: to be curious, to build well, to be honest with yourself, and to be content with the person doing the work.</p>
+<p>That changes what learning should be for. Less memorizing, more asking. Less competing for a ranking, more building things that matter to you. Less fear of being wrong, more practice at noticing it. The goal is not to be employable. It is to be whole.</p>
+<h2>07 · Solve it once, for everyone</h2>
+<p>Every hard problem I have worked on had already been solved somewhere, by someone, and then solved again and again in rooms that never talked to each other. Much of the effort in any organization goes into rediscovering what someone else already knew.</p>
+<p>In a world of abundance, that repeated effort is the real scarcity. If every person could take on a problem, solve it, and share the solution freely, no one would spend years rebuilding the same answer. Their energy would go to the next problem instead.</p>
+<p>That is how a civilization compounds. Scientists describe a Type I civilization as one that can harness all the energy available on its home planet. We will not get there by working harder on problems already solved. We get there when every solution becomes everyone's starting point.</p>
+<p>This is where the two halves of this essay meet. When you no longer need applause, giving your best work away costs you nothing.</p>
+<h2>What I believe</h2>
+<ol>
+<li>Education should teach people how to live, not only how to earn.</li>
+<li>Self-worth that depends on someone else's approval can be taken away. Self-worth you earn from yourself cannot.</li>
+<li>Abundance is a responsibility. The systems that create it have to be trustworthy.</li>
+<li>Being wrong, and noticing it, is the fastest way to learn anything.</li>
+<li>Peace of mind is not the prize at the end. It is the way you walk.</li>
+<li>Solve a problem once, then give the answer away.</li>
+</ol>
 </div>
+<!-- MEDIUM-ESSAY:END -->
+</article>
+
+<!-- MEDIUM-POSTS:START -->
+<section id="writing" class="writing" aria-labelledby="writing-title">
+<h2 id="writing-title">Latest writing</h2>
+<p>New essays appear here as they are published on Medium.</p>
+<p class="posts-more"><a href="https://medium.com/@anp.vinay" rel="noopener">All writing on Medium ↗</a></p>
+</section>
+<!-- MEDIUM-POSTS:END -->
+
+<aside class="author" aria-label="About the author">
+<span class="mono-mark" aria-hidden="true">VA</span>
+<div>
+<p>Written by Vinay Ambalihalli. More than twenty years of designing data platforms, mostly in healthcare and insurance, and building small products on the side.</p>
+<p><a href="/about/">Experience and background</a> · <a href="/building/">Ventures</a> · <a href="mailto:vinay.ambal@gmail.com">Email</a></p>
+</div>
+</aside>
+</div>
+</div>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="who">Vinay Ambalihalli<span>Pleasanton, California</span></div>
+    <nav aria-label="Elsewhere">
+      <a href="mailto:vinay.ambal@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/vinayambalihalli" rel="me">LinkedIn</a>
+      <a href="https://github.com/vinay-ambal" rel="me">GitHub</a>
+      <a href="https://medium.com/@anp.vinay" rel="me">Medium</a>
+    </nav>
+    <div class="copy">© 2026 Vinay Ambalihalli · Plain HTML on GitHub Pages</div>
+  </div>
+</footer>
 </body>
 </html>

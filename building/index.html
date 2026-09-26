@@ -3,84 +3,93 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ventures | Vinay Ambalihalli</title>
-<meta name="description" content="Things I build on my own: a marketplace in development, a housing analytics tool, AI experiments, and an earlier food business.">
-<meta property="og:title" content="Ventures | Vinay Ambalihalli">
-<meta property="og:description" content="Things I build on my own: a marketplace in development, a housing analytics tool, AI experiments, and an earlier food business.">
+<title>Ventures · Vinay Ambalihalli</title>
+<meta name="description" content="Small products built outside the day job: a marketplace in development, a housing analytics tool, AI experiments, and an earlier food business.">
+<link rel="canonical" href="https://vinay-ambal.github.io/building/">
+<meta property="og:title" content="Ventures · Vinay Ambalihalli">
+<meta property="og:description" content="Small products built outside the day job: a marketplace in development, a housing analytics tool, AI experiments, and an earlier food business.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#FBFBFC" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0F1114" media="(prefers-color-scheme: dark)">
+<meta property="og:url" content="https://vinay-ambal.github.io/building/">
+<meta name="theme-color" content="#C2410C" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#9A3412" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-<div class="page">
-<header class="mast">
-  <div class="name">Vinay Ambalihalli</div>
-  <nav>
-    <a href="/">About</a>
-    <a href="/work/">Work</a>
-    <a href="/building/" aria-current="page">Ventures</a>
-  </nav>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/" aria-label="Vinay Ambalihalli, home">
+      <span class="mono-mark" aria-hidden="true">VA</span>
+      <span class="brand-name">Vinay Ambalihalli</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/">Essay</a>
+      <a href="/#writing">Writing</a>
+      <a href="/about/">About</a>
+      <a href="/building/" aria-current="page">Ventures</a>
+      <a class="pill" href="mailto:vinay.ambal@gmail.com">Email me</a>
+    </nav>
+  </div>
 </header>
-<main>
-<h1>Ventures</h1>
+<main id="main">
+<div class="wrap">
+<div class="measure">
+<header class="page-head">
+<p class="eyebrow">Ventures</p>
+<h1>Building on the side</h1>
+<p class="lede">Small things built outside the day job. A bad decision shows up right away and costs real money, which keeps the architecture practical.</p>
+</header>
 
-<p class="lede">Outside the day job I build small things of my own. They are how I keep my hands
-on real code and real trade-offs. They are not where my ambition is.</p>
+<div class="ventures">
+<article class="venture">
+<span class="status dev">In development</span>
+<h2>A two-sided local marketplace</h2>
+<p>The interesting part is not the marketplace. It is who can see what.</p>
+<p>Authorization lives in the database, as row-level security, rather than in application code. The reason is failure direction: a missed row-level policy denies access, while a missed application check leaks data. A bug that locks someone out is easier to live with than one that shows them someone else's data.</p>
+<p>User requests and system jobs reach the data on separate paths. A user request carries that user's identity, and the database enforces what the identity can see. System work runs on a separate privileged path, and lint rules on imports keep application code from reaching for it. A per-role test suite checks the policies before changes ship.</p>
+<p class="tags">PostgreSQL · Row-level security · Access design</p>
+</article>
 
-<div class="project">
-  <div class="meta">in development</div>
-  <h3>A two-sided local marketplace</h3>
-  <p>The interesting part is not the marketplace. It is who can see what.</p>
-  <p>I put authorization in the database, as row-level security, rather than in application
-  code. The reason is failure direction: a missed row-level policy denies access, while a missed
-  application check leaks data. I would rather ship a bug that locks someone out than one that
-  shows them someone else's data.</p>
-  <p>User requests and system jobs reach the data on separate paths. A user request carries
-  that user's identity, and the database enforces what the identity can see. System work runs on
-  a separate privileged path, and lint rules on imports keep application code from reaching for
-  it. A per-role test suite checks the row-level policies before changes ship.</p>
-  <p class="focus">PostgreSQL &middot; Row-level security &middot; Access design</p>
+<article class="venture">
+<span class="status live">Running</span>
+<h2>Housing inventory analytics</h2>
+<p>A ZIP-level housing inventory analytics tool built on Python, FastAPI, and libSQL. It runs for about a dollar a month. Each of its eight architecture decisions is written down with the alternatives considered.</p>
+<p class="tags">Python · FastAPI · libSQL · Architecture decision records</p>
+</article>
+
+<article class="venture">
+<span class="status">Experiments</span>
+<h2>AI over enterprise-style data</h2>
+<p>Retrieval-augmented generation over messy, enterprise-shaped data, to learn where it breaks before it matters.</p>
+<!-- TODO: link the agent data-access proof of concept here once its repo is public and it runs end to end. -->
+<p class="tags">RAG</p>
+</article>
+
+<article class="venture">
+<span class="status">Earlier</span>
+<h2>A quick-service restaurant in India</h2>
+<p>Built from the brand through the supply chain. It showed where the hard parts are, and they were not the app: supply-side reliability, footprint economics, and regulatory gating. What it cost counts as tuition.</p>
+<p class="tags">Operations · Supply chain</p>
+</article>
 </div>
-
-<div class="project">
-  <div class="meta">running</div>
-  <h3>Housing inventory analytics</h3>
-  <p>A ZIP-level housing inventory analytics tool built on Python, FastAPI, and libSQL. It runs
-  for about a dollar a month. Each of its eight architecture decisions is written down along with
-  the alternatives I considered.</p>
-  <p class="focus">Python &middot; FastAPI &middot; libSQL &middot; Architecture decision records</p>
 </div>
-
-<div class="project">
-  <div class="meta">prototypes</div>
-  <h3>AI experiments</h3>
-  <p>Retrieval-augmented generation over enterprise-style data.</p>
-  <!-- TODO: link the agent data-access proof of concept here once its repo is public and it runs end to end. -->
 </div>
-
-<div class="project">
-  <div class="meta">earlier</div>
-  <h3>A quick-service food business in India</h3>
-  <p>I built it from the brand through the supply chain. It taught me where the hard parts are,
-  and they were not the app. They were supply-side reliability, footprint economics, and
-  regulatory gating. I count what it cost as tuition.</p>
-</div>
-
-<h2>Why I do this</h2>
-
-<p>Building for large enterprises is the core of what I do. Building my own things, where a bad
-decision shows up right away and I pay for it, keeps my architecture calls practical.</p>
 </main>
-<footer class="foot">
-  <a href="mailto:vinay.ambal@gmail.com">Email</a>
-  <a href="https://www.linkedin.com/in/vinayambalihalli">LinkedIn</a>
-  <a href="https://github.com/vinay-ambal">GitHub</a>
-  <span class="place">Pleasanton, California</span>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="who">Vinay Ambalihalli<span>Pleasanton, California</span></div>
+    <nav aria-label="Elsewhere">
+      <a href="mailto:vinay.ambal@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/vinayambalihalli" rel="me">LinkedIn</a>
+      <a href="https://github.com/vinay-ambal" rel="me">GitHub</a>
+      <a href="https://medium.com/@anp.vinay" rel="me">Medium</a>
+    </nav>
+    <div class="copy">© 2026 Vinay Ambalihalli · Plain HTML on GitHub Pages</div>
+  </div>
 </footer>
-</div>
 </body>
 </html>

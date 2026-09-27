@@ -78,10 +78,14 @@ section[id],h2[id]{scroll-margin-top:24px}
 /* ---------- header (orange) ---------- */
 .site-head{background:var(--orange);color:var(--on-orange)}
 .site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:76px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
-.brand{display:flex;align-items:center;gap:12px;color:var(--on-orange);border:0;padding:0}
+.brand{display:flex;align-items:center;min-height:44px;border:0;padding:0;border-radius:50%}
 .brand:hover{border:0}
+.yinyang{width:40px;height:40px;display:block}
+.yinyang .yy-light{fill:var(--on-orange)}
+.yinyang .yy-dark{fill:#2A211B}
+@media (prefers-reduced-motion:no-preference){.yinyang{animation:yy-spin 40s linear infinite}}
+@keyframes yy-spin{to{transform:rotate(360deg)}}
 .mono-mark{width:38px;height:38px;border-radius:50%;background:var(--on-orange);color:var(--orange);display:grid;place-items:center;font-family:var(--serif);font-weight:600;font-size:15px;letter-spacing:.04em}
-.brand-name{font-family:var(--serif);font-size:19px;font-weight:500}
 .site-nav{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .site-nav a{color:var(--on-orange);border:0;padding:10px 12px;border-radius:999px;font-size:15px;min-height:44px;display:inline-flex;align-items:center}
 .site-nav a:hover{background:rgba(255,248,241,.14)}
@@ -105,42 +109,32 @@ section[id],h2[id]{scroll-margin-top:24px}
 .eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--link);margin:0 0 14px}
 h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--ink);line-height:1.15;letter-spacing:-.01em}
 
-/* ---------- home: essay ---------- */
-.essay{padding-top:72px}
-.essay-title{font-size:clamp(40px,6.4vw,64px);line-height:1.04;letter-spacing:-.02em;margin:0 0 16px}
-.essay-meta{font-family:var(--mono);font-size:13px;color:var(--muted);margin:0 0 40px}
-.essay-meta a{color:var(--muted);border-bottom-color:var(--line)}
-.essay-meta a:hover{color:var(--link)}
-.essay-body{font-size:19px;line-height:1.75;color:var(--ink-2)}
-.essay-body > h3:first-child{font-family:var(--serif);font-weight:400;font-size:clamp(21px,2.6vw,25px);line-height:1.45;color:var(--ink-2);margin:0 0 56px;padding-bottom:40px;border-bottom:1px solid var(--line)}
-.essay-body h2{font-size:clamp(26px,3.4vw,32px);margin:64px 0 18px}
-.essay-body h3{font-size:22px;margin:40px 0 12px}
-.essay-body p{margin:0 0 22px}
-.essay-body strong{color:var(--ink);font-weight:600}
-.essay-body blockquote{margin:56px calc(50% - min(50vw, 480px));padding:48px max(var(--gutter), calc(50% - 340px));background:var(--sand);font-family:var(--serif);font-style:italic;font-size:clamp(24px,3.2vw,32px);line-height:1.35;color:var(--ink);text-align:center;border-radius:4px}
-.essay-body blockquote p{margin:0}
-.essay-body ol,.essay-body ul{margin:8px 0 28px;padding:0;list-style:none;counter-reset:belief}
-.essay-body ol li,.essay-body ul li{counter-increment:belief;position:relative;padding:16px 0 16px 48px;border-top:1px solid var(--line);font-family:var(--serif);font-size:21px;line-height:1.4;color:var(--ink)}
-.essay-body ol li:last-child,.essay-body ul li:last-child{border-bottom:1px solid var(--line)}
-.essay-body ol li::before{content:counter(belief,decimal-leading-zero);position:absolute;left:0;top:21px;font-family:var(--mono);font-size:12px;color:var(--link)}
-.essay-body ul li::before{content:"";position:absolute;left:4px;top:28px;width:8px;height:8px;border-radius:50%;background:var(--orange)}
-.essay-body figure{margin:40px 0}
-.essay-body img{max-width:100%;height:auto;border-radius:10px;display:block}
-.essay-body figcaption{font-size:14px;color:var(--muted);margin-top:8px;text-align:center}
-.essay-body pre{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;overflow:auto;font-size:14px}
-.essay-body hr{border:0;border-top:1px solid var(--line);margin:48px 0}
-
-/* ---------- home: latest writing ---------- */
-.writing{margin-top:88px;padding-top:48px;border-top:1px solid var(--line)}
-.writing h2{font-size:30px;margin:0 0 8px}
-.posts{list-style:none;margin:16px 0 0;padding:0}
-.posts li{display:grid;gap:4px;padding:22px 0;border-top:1px solid var(--line)}
-.posts li:first-child{border-top:0}
+/* ---------- home: latest post ---------- */
+.latest{padding-top:72px}
+.post-title{font-size:clamp(36px,5.6vw,56px);line-height:1.06;letter-spacing:-.02em;margin:0 0 14px}
+.post-title a{color:var(--ink);border:0;padding:0}
+.post-title a:hover{color:var(--link)}
+.post-meta{font-family:var(--mono);font-size:13px;color:var(--muted);margin:0 0 28px}
+.post-excerpt{font-size:19px;line-height:1.75;color:var(--ink-2)}
+.post-excerpt p{margin:0 0 22px}
+.read-more{display:inline-flex;align-items:center;min-height:44px;padding:10px 20px;border-radius:999px;background:var(--orange);color:var(--on-orange);border:0;font-weight:500}
+.read-more:hover{background:var(--orange-deep);border:0}
+.more-posts{margin-top:48px}
+.more-posts h2{font-size:24px;margin:0 0 4px}
+.posts{list-style:none;margin:8px 0 0;padding:0}
+.posts li{display:grid;gap:2px;padding:16px 0;border-top:1px solid var(--line)}
 .posts time{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.posts a{font-family:var(--serif);font-size:23px;line-height:1.3;color:var(--ink);border:0}
+.posts a{font-family:var(--serif);font-size:21px;line-height:1.3;color:var(--ink);border:0;padding:0}
 .posts a:hover{color:var(--link)}
-.posts p{margin:0;color:var(--ink-2);font-size:16px}
-.posts-more{margin:12px 0 0;font-size:15px}
+.posts-more{margin:24px 0 0;font-size:15px}
+
+/* ---------- home: beliefs ---------- */
+.beliefs{margin-top:80px;padding-top:40px;border-top:1px solid var(--line)}
+.beliefs h2{font-size:clamp(26px,3.4vw,32px);margin:0 0 18px}
+.beliefs ol{margin:0;padding:0;list-style:none;counter-reset:belief}
+.beliefs li{counter-increment:belief;position:relative;padding:16px 0 16px 48px;border-top:1px solid var(--line);font-family:var(--serif);font-size:21px;line-height:1.4;color:var(--ink)}
+.beliefs li:last-child{border-bottom:1px solid var(--line)}
+.beliefs li::before{content:counter(belief,decimal-leading-zero);position:absolute;left:0;top:21px;font-family:var(--mono);font-size:12px;color:var(--link)}
 
 /* ---------- home: about the author ---------- */
 .author{margin-top:72px;padding:28px 32px;background:var(--surface);border:1px solid var(--line);border-radius:16px;display:flex;gap:20px;align-items:flex-start}
@@ -166,9 +160,12 @@ h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--ink);line-height:1
 .job ul{margin:0;padding-left:20px}
 .job li{margin:0 0 6px;color:var(--ink-2)}
 .job li::marker{color:var(--orange)}
-.skills{margin:0;display:grid;grid-template-columns:180px 1fr;gap:10px 20px}
-.skills dt{font-weight:600;color:var(--ink)}
-.skills dd{margin:0;color:var(--ink-2)}
+.job.compact{margin-bottom:22px}
+.job.compact .job-head h3{font-size:19px}
+.job.compact li{font-size:15.5px;margin-bottom:4px}
+.skill-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 28px}
+.skill-grid h3{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 4px;line-height:1.4}
+.skill-grid p{margin:0;font-size:15px;line-height:1.5;color:var(--ink-2)}
 .plain{list-style:none;margin:0;padding:0}
 .plain li{margin:0 0 8px;color:var(--ink-2)}
 .plain li strong{color:var(--ink);font-weight:600}
@@ -194,17 +191,21 @@ h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--ink);line-height:1
 .notfound h1{font-size:44px;margin:0 0 12px}
 
 /* ---------- small screens ---------- */
+@media (max-width:860px){
+  .skill-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
 @media (max-width:640px){
   body{font-size:16.5px}
   .site-head .wrap{padding-top:14px;padding-bottom:10px}
   .site-nav{width:calc(100% + 8px);margin-left:-8px;gap:0;flex-wrap:nowrap}
   .site-nav a{padding:8px 9px;font-size:14.5px}
   .site-nav a.pill{margin-left:auto;padding:8px 14px;white-space:nowrap}
-  .essay{padding-top:48px}
-  .essay-body{font-size:18px}
+  .latest{padding-top:48px}
+  .post-excerpt{font-size:18px}
+  .beliefs li{font-size:19px}
   .author{flex-direction:column;padding:24px}
-  .skills{grid-template-columns:1fr;gap:2px}
-  .skills dd{margin-bottom:12px}
+  .skill-grid{grid-template-columns:1fr;gap:14px}
   .job-head{flex-direction:column}
 }
 
@@ -217,4 +218,5 @@ h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--ink);line-height:1
   .resume section{margin-top:16pt;padding-top:8pt}
   a{border:0;color:#000}
   .job{break-inside:avoid;margin-bottom:12pt}
+  .skill-grid{grid-template-columns:repeat(3,1fr);gap:8pt 16pt}
 }

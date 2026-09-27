@@ -5,19 +5,17 @@ is not in the fact source, it does not go on the site; leave `<!-- TODO: confirm
 
 ## What each page does
 
-**Home** leads with ideas, not a biography: the essay "The Age of Enough," then recent writing,
-then one short line about the author. The name appears in the header and footer, not the headline.
+**Home** ("Blog post") leads with ideas, not a biography: the latest Medium post, then What I
+believe, then one short line about the author. The header carries a small yin-yang mark instead of
+the name; the name appears in the byline and footer.
 
-**About** reads like a resume: no adjectives about the person, no "I am" statements. Experience,
+**About me** reads like a resume: no adjectives about the person, no "I am" statements. Experience,
 skills, and education, and the work speaks for itself.
 
 **Ventures** describes the kind of work, never the business.
 
 ## Deliberately left off
 
-- **Detail on earlier roles.** The About page gives eHealth, Kaiser Permanente, and Belk in full.
-  Trane, TIAA, and Cognizant appear as one "Earlier" line with titles and dates, so the page
-  matches the resume and LinkedIn without the detail.
 - **Internal metrics from the current employer.** No pipeline counts, cost figures, or
   performance percentages from eHealth. Numbers from past employers (Kaiser, Belk) are fine.
 - **Venture names, URLs, screenshots, revenue, or traction.** Work in development says so.

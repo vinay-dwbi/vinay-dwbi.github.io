@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>About · Vinay Ambalihalli</title>
+<title>About me · Vinay Ambalihalli</title>
 <meta name="description" content="Data platform architect. Experience, skills, and education.">
 <link rel="canonical" href="https://vinay-ambal.github.io/about/">
-<meta property="og:title" content="About · Vinay Ambalihalli">
+<meta property="og:title" content="About me · Vinay Ambalihalli">
 <meta property="og:description" content="Data platform architect. Experience, skills, and education.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://vinay-ambal.github.io/about/">
@@ -22,14 +22,12 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head">
   <div class="wrap">
-    <a class="brand" href="/" aria-label="Vinay Ambalihalli, home">
-      <span class="mono-mark" aria-hidden="true">VA</span>
-      <span class="brand-name">Vinay Ambalihalli</span>
+    <a class="brand" href="/" aria-label="Home">
+      <svg class="yinyang" viewBox="0 0 100 100" aria-hidden="true"><circle class="yy-light" cx="50" cy="50" r="48"/><path class="yy-dark" d="M50 2a48 48 0 0 1 0 96a24 24 0 0 1 0-48a24 24 0 0 0 0-48z"/><circle class="yy-dark" cx="50" cy="26" r="8"/><circle class="yy-light" cx="50" cy="74" r="8"/></svg>
     </a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="/">Essay</a>
-      <a href="/#writing">Writing</a>
-      <a href="/about/" aria-current="page">About</a>
+      <a href="/">Blog post</a>
+      <a href="/about/" aria-current="page">About me</a>
       <a href="/building/">Ventures</a>
       <a class="pill" href="mailto:vinay.ambal@gmail.com">Email me</a>
     </nav>
@@ -85,12 +83,34 @@
 <li>Automated operational reporting to 400+ store managers and stood up an in-house Tableau service for self-service analytics.</li>
 </ul>
 </div>
-<div class="job">
-<div class="job-head"><h3>Earlier</h3></div>
-<ul class="plain">
-<li><strong>Trane</strong> · Solutions Architect · La Crosse, WI · Oct 2016 to Feb 2017</li>
-<li><strong>TIAA</strong> · Sr. Software Engineer (Contract) · Charlotte, NC · Feb 2009 to Dec 2012</li>
-<li><strong>Cognizant</strong> · Software Engineer · Bangalore, India · 2005 to 2008</li>
+</section>
+
+<section aria-labelledby="earlier">
+<h2 id="earlier">Earlier experience</h2>
+<div class="job compact">
+<div class="job-head"><h3>Trane</h3><span class="when">Oct 2016 to Feb 2017</span></div>
+<p class="title">Solutions Architect <span>· La Crosse, WI</span></p>
+<!-- TODO: confirm. The dataset records only platform roadmap and business-case work for Trane. -->
+<ul>
+<li>Short engagement on platform roadmap and business-case work.</li>
+</ul>
+</div>
+<div class="job compact">
+<div class="job-head"><h3>TIAA</h3><span class="when">Feb 2009 to Dec 2012</span></div>
+<p class="title">Sr. Software Engineer (Contract) <span>· Charlotte, NC</span></p>
+<ul>
+<li>Onsite lead for the analytics platform behind retirement plan administration: plan lifecycle management, institutional reporting, and automated distribution to plan administrators.</li>
+<li>Delivered the OBIEE 10g to 11g upgrade; built the data catalog and source-to-target mappings; extended the dimensional model.</li>
+<li>ERISA reporting with PDF, Excel, and CSV bursting; write-back, PL/SQL triggers, and WSDL/SOAP integration; performance tuning with the DBAs.</li>
+</ul>
+</div>
+<div class="job compact">
+<div class="job-head"><h3>Cognizant</h3><span class="when">2005 to 2008</span></div>
+<p class="title">Software Engineer <span>· Bangalore, India</span></p>
+<ul>
+<li>CRM, data warehouse, and analytics delivery across financial services, logistics, telecommunications, and media.</li>
+<li>Clients included Franklin Templeton (Siebel Marketing), DHL (Kuala Lumpur), Cbeyond (Atlanta), and The New York Times.</li>
+<li>Siebel Analytics and OBIEE, Informatica, and Oracle. Oracle certifications earned in 2006.</li>
 </ul>
 </div>
 </section>
@@ -107,15 +127,17 @@
 
 <section aria-labelledby="skills">
 <h2 id="skills">Skills</h2>
-<dl class="skills">
-<dt>Data architecture</dt><dd>Lakehouse and warehouse design; dimensional, canonical, and event modeling; identity resolution and master data</dd>
-<dt>Platforms</dt><dd>Snowflake, Databricks, AWS, Oracle (12c, Exadata), PostgreSQL, MySQL, Teradata</dd>
-<dt>Pipelines</dt><dd>Kafka, Attunity CDC (Qlik Replicate), Apache Airflow, Matillion, Informatica, WhereScape</dd>
-<dt>Governance</dt><dd>SOX compliance, lineage, row-level and object-level security, PHI and PII under HIPAA</dd>
-<dt>ML and AI</dt><dd>ML entity resolution (H2O.ai), retrieval-augmented generation over enterprise data</dd>
-<dt>Analytics</dt><dd>Looker and LookML, Tableau, OBIEE, Oracle BI Publisher</dd>
-<dt>Languages</dt><dd>SQL, Python (PySpark, pandas), PL/SQL, TypeScript, JavaScript, Shell</dd>
-</dl>
+<div class="skill-grid">
+<div><h3>System architecture</h3><p>Data platform and system design, lakehouse and warehouse, dimensional, canonical, and event modeling, identity resolution, API and SOAP integration</p></div>
+<div><h3>AI and ML</h3><p>Local RAG with LLMs over enterprise data, ML entity resolution (H2O.ai), Snowflake Document AI (explored)</p></div>
+<div><h3>AI-assisted development</h3><p>Claude Code, Cursor</p></div>
+<div><h3>Data platforms</h3><p>Snowflake, Databricks, Oracle (12c, Exadata), PostgreSQL, MySQL, DocumentDB, Teradata</p></div>
+<div><h3>Pipelines and streaming</h3><p>Kafka, Attunity CDC (Qlik Replicate), Apache Airflow, Matillion, Informatica, WhereScape, IBM DataStage</p></div>
+<div><h3>Cloud, hosting, and web</h3><p>AWS, Vercel, Supabase, Resend, DNS and domains, GitHub Pages</p></div>
+<div><h3>Governance and security</h3><p>SOX compliance, lineage, row-level and object-level security, PHI and PII under HIPAA</p></div>
+<div><h3>Analytics and BI</h3><p>Looker and LookML, Tableau, OBIEE, Oracle BI Publisher, Adobe Analytics</p></div>
+<div><h3>Languages</h3><p>SQL, Python (PySpark, pandas), PL/SQL, TypeScript, JavaScript, Shell</p></div>
+</div>
 </section>
 
 <section aria-labelledby="education">
